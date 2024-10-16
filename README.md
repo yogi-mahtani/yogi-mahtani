@@ -1,7 +1,7 @@
 - 👋 Hi, I’m @yogi-mahtani
 - 👀 I’m interested in SaaS, Recruitment, Recruit tech, Direct to Consumer ecommerce and marketplace businesses and people. 
 - 🌱 I’m currently building a Marketplace application.
-- 💞️ I’m looking to collaborate with Engineers, designers and Product leaders on hiring tech people for their team. 
+- 💞️ I’m looking to collaborate with Engineers, Designers and Product leaders on their hiring needs.
 - 📫 How to reach me ... https://linkedin.com/in/ymahtani
 - ⚡ About me: ...I have an 8+ year background in UX Design and Product Management and 4 years in Recruitment. 
 
