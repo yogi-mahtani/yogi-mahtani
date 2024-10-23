@@ -34,3 +34,15 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+- 👋 Hi, I’m @yogi-mahtani
+- 👀 I’m interested in SaaS, Recruitment, Recruit tech, Direct to Consumer ecommerce and marketplace businesses and people.
+- 🌱 I’m currently building a Marketplace application.
+- 💞️ I’m looking to collaborate with Engineers, Designers and Product leaders on their hiring needs.
+- 📫 How to reach me ... https://linkedin.com/in/ymahtani
+- ⚡ About me: ...I have an 8+ year background in UX Design and Product Management and 4 years in Recruitment.
+
+<!---
+yogi-mahtani/yogi-mahtani is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+You can click the Preview link to take a look at your changes.
+--->
