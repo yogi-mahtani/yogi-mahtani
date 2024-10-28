@@ -1,0 +1,105 @@
+:root {
+  /* Primitive Colors */
+  --color-brand-black: #000000;
+  --color-brand-white: #ffffff;
+
+  /* Neutral Colors */
+  --grey-scale-0: #ffffff;
+  --grey-scale-100: #eeeeee;
+  --grey-scale-200: #cccccc;
+  --grey-scale-300: #aaaaaa;
+  --grey-scale-400: #666666;
+  --grey-scale-500: #444444;
+  --grey-scale-600: #222222;
+  --grey-scale-700: #111111;
+  --grey-scale-800: #000000;
+
+  /* System Colors */
+  --color-success-green: #027a48;
+  --color-success-green-light: #ecfdf3;
+  --color-error-red: #b42318;
+  --color-error-red-light: #fef3f2;
+
+  /* Semantic Colors - Background */
+  --background-primary: var(--grey-scale-800); /* black */
+  --background-secondary: var(--grey-scale-0); /* white */
+  --background-tertiary: var(--grey-scale-400); /* neutral */
+  --background-alternate: var(--grey-scale-800); /* black */
+  --background-success: var(--color-success-green-light);
+  --background-error: var(--color-error-red-light);
+
+  /* Semantic Colors - Border */
+  --border-primary: var(--grey-scale-800); /* black */
+  --border-secondary: var(--grey-scale-300); /* neutral light */
+  --border-tertiary: var(--grey-scale-500); /* neutral dark */
+  --border-alternate: var(--grey-scale-0); /* white */
+  --border-success: var(--color-success-green);
+  --border-error: var(--color-error-red);
+
+  /* Semantic Colors - Text */
+  --text-primary: var(--grey-scale-800); /* black */
+  --text-secondary: var(--grey-scale-300); /* neutral light */
+  --text-alternate: var(--grey-scale-0); /* white */
+  --text-success: var(--color-success-green);
+  --text-error: var(--color-error-red);
+
+  /* Semantic Colors - Link */
+  --link-primary: var(--grey-scale-800); /* black */
+  --link-secondary: var(--grey-scale-400); /* neutral */
+  --link-alternate: var(--grey-scale-0); /* white */
+}
+
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
