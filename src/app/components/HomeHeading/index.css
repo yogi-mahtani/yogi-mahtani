@@ -1,0 +1,27 @@
+.intro{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+   margin:85px 45px 85px 45px;
+}
+.intro-heading{
+    font-weight: 700;
+    font-family: 'Roboto';
+    font-size:60px;
+}
+/* 
+.coloreheadingd-{
+   background:linear-gradient(to-right,rgba(255, 48, 48, 1),rgba(255, 0, 160, 0.8));
+   background-clip: text;
+   
+   -webkit-text-fill-color: transparent; 
+            -webkit-background-clip: text; 
+} */
+
+.colored-heading  {
+    background: -webkit-linear-gradient(rgba(255, 48, 48, 1),rgba(255, 0, 160, 0.8));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  
