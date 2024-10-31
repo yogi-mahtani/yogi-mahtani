@@ -3,6 +3,25 @@ body {
 }
 
 :root {
+  /* Typography */
+  --font-size-h1-desktop: 56px;
+  --font-size-h2-desktop: 48px;
+  --font-size-h3-desktop: 40px;
+  --font-size-h4-desktop: 32px;
+  --font-size-h5-desktop: 24px;
+  --font-size-h6-desktop: 20px;
+
+  --font-size-h1-mobile: 40px;
+  --font-size-h2-mobile: 36px;
+  --font-size-h3-mobile: 32px;
+  --font-size-h4-mobile: 24px;
+  --font-size-h5-mobile: 20px;
+  --font-size-h6-mobile: 18px;
+
+  --line-height-h1-h3: 120%;
+  --line-height-h4: 130%;
+  --line-height-h5-h6: 140%;
+
   /* Primitive Colors */
   --color-brand-black: #000000;
   --color-brand-white: #ffffff;
@@ -22,6 +41,7 @@ body {
   --color-success-green: #027a48;
   --color-success-green-light: #ecfdf3;
   --color-error-red: #b42318;
+  --color-orange: #ff2f4f;
   --color-error-red-light: #fef3f2;
 
   /* Semantic Colors - Background */
@@ -106,4 +126,52 @@ select {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+/* Heading styles */
+h1 {
+  font-size: var(--font-size-h1-desktop);
+  line-height: var(--line-height-h1-h3);
+}
+h2 {
+  font-size: var(--font-size-h2-desktop);
+  line-height: var(--line-height-h1-h3);
+}
+h3 {
+  font-size: var(--font-size-h3-desktop);
+  line-height: var(--line-height-h1-h3);
+}
+h4 {
+  font-size: var(--font-size-h4-desktop);
+  line-height: var(--line-height-h4);
+}
+h5 {
+  font-size: var(--font-size-h5-desktop);
+  line-height: var(--line-height-h5-h6);
+}
+h6 {
+  font-size: var(--font-size-h6-desktop);
+  line-height: var(--line-height-h5-h6);
+}
+
+/* Responsive typography for mobile */
+@media (max-width: 768px) {
+  h1 {
+    font-size: var(--font-size-h1-mobile);
+  }
+  h2 {
+    font-size: var(--font-size-h2-mobile);
+  }
+  h3 {
+    font-size: var(--font-size-h3-mobile);
+  }
+  h4 {
+    font-size: var(--font-size-h4-mobile);
+  }
+  h5 {
+    font-size: var(--font-size-h5-mobile);
+  }
+  h6 {
+    font-size: var(--font-size-h6-mobile);
+  }
 }
