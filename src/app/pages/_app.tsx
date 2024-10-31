@@ -6,7 +6,7 @@ import ReactGA from 'react-ga';
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
-    ReactGA.initialize('YOUR_GOOGLE_ANALYTICS_ID');
+    ReactGA.initialize('G-3K9RVS7WPL'); // remove from here and add to env
     ReactGA.pageview(window.location.pathname + window.location.search);
   }, []);
 
