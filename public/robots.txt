@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fynder-talent.vercel.app/sitemap.xml

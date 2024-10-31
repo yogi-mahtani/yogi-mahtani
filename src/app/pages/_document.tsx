@@ -45,6 +45,20 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
             rel="stylesheet"
           />
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=AW-CONVERSION_ID"
+          ></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-CONVERSION_ID');
+            `,
+            }}
+          />
         </Head>
         <body>
           <Main />

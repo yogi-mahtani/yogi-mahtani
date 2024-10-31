@@ -1,6 +1,11 @@
+'use client';
+
 import type { AppProps } from 'next/app';
+import { useEffect } from 'react';
+import ReactGA from 'react-ga';
 
 import { Roboto } from '@next/font/google';
+
 import '../globals.css';
 
 const roboto = Roboto({
@@ -9,6 +14,11 @@ const roboto = Roboto({
 });
 
 function MyApp({ Component, pageProps }: AppProps) {
+  useEffect(() => {
+    ReactGA.initialize('G-3K9RVS7WPL'); // remove from here and add to env
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }, []);
+
   return (
     <main className={roboto.className}>
       <Component {...pageProps} />
