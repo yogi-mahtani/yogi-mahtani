@@ -82,9 +82,16 @@
   vertical-align: baseline;
 }
 
+@font-face {
+  font-family: 'Roboto';
+  src: url('./fonts/Roboto-Regular.ttf')
+}
+
+
 html,
 body {
   height: 100%;
+  font-family:'Roboto' ;
 }
 
 body {
