@@ -8,3 +8,4 @@ export const HeaderContainer = styled.header`
   color: white;
   text-align: center;
 `;
+

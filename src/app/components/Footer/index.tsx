@@ -10,11 +10,11 @@ export function Footer() {
     return pages.map((page)=><div className="page-link">{page}</div>)
    }
   const socialLinks = ()=> {
-   let links = ['/fb.png','/fb.png','/fb.png','/fb.png'];
+   let links = ['/fb.png','/Insta.png','/Twitter.png','/Youtube.png'];
    return links.map((link)=><img  src={link} className="socail-link"/>)
   }
     const contactLinks = () => {
-        let contactLinks = [{ title: 'Email', value: 'Leadconsultant@fynder.com',img:'/location.png' }, { title: 'Hong Kong', value: '+852 55127188', img:'/location.png' }, { title: 'singapore', value: '+65 8333 4000',img:'/location.png' }]
+        let contactLinks = [{ title: 'Email', value: 'Leadconsultant@fynder.com',img:'/Email.png' }, { title: 'Hong Kong', value: '+852 55127188', img:'/location.png' }, { title: 'singapore', value: '+65 8333 4000',img:'/location.png' }]
         return contactLinks.map((links) =>
          <div className="footer-contact-link-item" >
             <img className="footer-contact-link-img" src={links.img}/>
