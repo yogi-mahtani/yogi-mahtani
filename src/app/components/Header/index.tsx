@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 
 // components | constants
 import { Logo, HamburgerMenu } from '@/app/components';
@@ -40,13 +41,9 @@ const Header: React.FC = () => {
     return (
       <>
         {links.map((link) => (
-          <div
-            key={link.url}
-            className="nav-link"
-            onClick={() => handleMenuItemClick(link.url)}
-          >
-            {link.name}
-          </div>
+          <Link key={link.url} href={link.url} passHref>
+            <div className="nav-link">{link.name}</div>
+          </Link>
         ))}
       </>
     );
