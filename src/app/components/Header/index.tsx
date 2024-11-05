@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { Logo } from '../Logo';
 import { Links } from '../../Utils/Links';
-import { Hamburger } from '../Hamburger';
+import Hamburger from '../Hamburger';
 
 import './index.css';
 

@@ -4,7 +4,7 @@ type HamburgerProps = {
   onClick: () => void;
 };
 
-export function Hamburger({ onClick }: HamburgerProps) {
+const Hamburger = ({ onClick }: HamburgerProps) => {
   return (
     <div className="hamburger" onClick={onClick}>
       <div className="ham-itm1"></div>
@@ -12,4 +12,6 @@ export function Hamburger({ onClick }: HamburgerProps) {
       <div className="ham-itm3"></div>
     </div>
   );
-}
+};
+
+export default Hamburger;
