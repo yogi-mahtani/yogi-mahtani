@@ -45,26 +45,24 @@ export function Footer() {
   };
 
   return (
-    <>
-      <div className="footer-container">
-        <div className="footer-contact-page-container">
-          <Logo></Logo>
-          <div className="footer-contact-page-links-container">
-            {supportPageLinks()}
-          </div>
-          <div className="footer-socialMedia">{socialLinks()}</div>
+    <div className="footer-container">
+      <div className="footer-contact-page-container">
+        <Logo></Logo>
+        <div className="footer-contact-page-links-container">
+          {supportPageLinks()}
         </div>
-        <div className="footer-privacy-contact-links-container">
-          <Divider></Divider>
-
-          <div className="footer-privacy-links-container">
-            <div>&#xA9; 2024 Fynder Talent.All rights reserved </div>
-            {privacyLinks()}
-          </div>
-
-          <div className="footer-conatact-link-container">{contactLinks()}</div>
-        </div>
+        <div className="footer-socialMedia">{socialLinks()}</div>
       </div>
-    </>
+      <div className="footer-privacy-contact-links-container">
+        <Divider></Divider>
+
+        <div className="footer-privacy-links-container">
+          <div>&#xA9; 2024 Fynder Talent.All rights reserved </div>
+          {privacyLinks()}
+        </div>
+
+        <div className="footer-conatact-link-container">{contactLinks()}</div>
+      </div>
+    </div>
   );
 }

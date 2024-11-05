@@ -1,19 +1,17 @@
-
-
-.logo-img{
-    margin-left: 1rem;
-    max-width: 150px;
-    object-fit: contain;
+.logo-img {
+  margin-left: 1rem;
+  max-width: 150px;
+  object-fit: contain;
 }
 
 .logo-container {
-    display: flex;
-    margin-left: 1rem;
+  display: flex;
+  margin-left: 1rem;
 }
 
-@media only screen and (max-width:600px) {
-    .logo-container{
-        justify-content: flex-start;
-        margin:0;
-    }
+@media only screen and (max-width: 600px) {
+  .logo-container {
+    justify-content: flex-start;
+    margin: 0;
+  }
 }

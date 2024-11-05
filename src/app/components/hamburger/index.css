@@ -1,46 +1,45 @@
-
-.hamburger{
-    display:none;
+.hamburger {
+  display: none;
 }
 
-
-.ham-itm1, .ham-itm2, .ham-itm3 {
-   height: 4px;
-   width: 1.5rem;
-   color: black;
-   border-radius: 10px;
-   background-color: black;
-   position: relative;
+.ham-itm1,
+.ham-itm2,
+.ham-itm3 {
+  height: 4px;
+  width: 1.5rem;
+  color: black;
+  border-radius: 10px;
+  background-color: black;
+  position: relative;
 }
 
-@media only screen and (max-width:600px) {
-    
-.hamburger{
-    display:flex;
+@media only screen and (max-width: 600px) {
+  .hamburger {
+    display: flex;
     flex-direction: column;
-    width:2rem;
-    height:2rem;
+    width: 2rem;
+    height: 2rem;
     justify-content: space-evenly;
-}
+  }
 
-
-.ham-itm1,.ham-itm2,.ham-itm3{
+  .ham-itm1,
+  .ham-itm2,
+  .ham-itm3 {
     transition: all 300ms ease-in;
-}
+  }
 
-.hamburger.active .ham-itm2{
+  .hamburger.active .ham-itm2 {
     background-color: transparent;
-}
+  }
 
-.hamburger.active .ham-itm1{
+  .hamburger.active .ham-itm1 {
     transform: rotate(45deg);
-    top:37px;
+    top: 37px;
     position: absolute;
-}
+  }
 
-.hamburger.active .ham-itm3{
+  .hamburger.active .ham-itm3 {
     transform: rotate(-45deg);
     bottom: 10px;
-}
-
+  }
 }

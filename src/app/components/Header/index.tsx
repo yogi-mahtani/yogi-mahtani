@@ -1,10 +1,11 @@
 'use client';
-import React, { use, useEffect, useState } from 'react';
+
+import React, { useState } from 'react';
 import { Logo } from '../Logo';
 import { Links } from '../../Utils/Links';
+import { Hamburger } from '../Hamburger';
 
 import './index.css';
-import { Hamburger } from '../hamburger';
 
 const Header: React.FC = () => {
   const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
