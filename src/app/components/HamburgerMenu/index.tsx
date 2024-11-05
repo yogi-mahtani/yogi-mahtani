@@ -1,18 +1,21 @@
-import './index.css';
+import React from 'react';
 
-type HamburgerProps = {
+interface HamburgerProps {
+  active: boolean;
   handleClick: () => void;
-  active: string;
-};
+}
 
-const HamburgerMenu = ({ handleClick, active }: HamburgerProps) => {
+const HamburgerMenu: React.FC<HamburgerProps> = ({ active, handleClick }) => {
+  const getClassNames = () => {
+    return `hamburger ${active ? 'active' : ''}`.trim();
+  };
+
   return (
-    <h2>asdsad</h2>
-    // <div className={`hamburger ${active}`} onClick={handleClick}>
-    //   <div className="ham-itm1"></div>
-    //   <div className="ham-itm2"></div>
-    //   <div className="ham-itm3"></div>
-    // </div>
+    <div className={getClassNames()} onClick={handleClick}>
+      <div className="ham-itm1"></div>
+      <div className="ham-itm2"></div>
+      <div className="ham-itm3"></div>
+    </div>
   );
 };
 

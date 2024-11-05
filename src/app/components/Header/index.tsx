@@ -50,7 +50,7 @@ const Header: React.FC = () => {
         <Logo />
         <HamburgerMenu
           handleClick={hamburgerClicked}
-          active={`hamburger ${isHamburgerOpen ? 'active' : ''}`}
+          active={isHamburgerOpen}
         />
       </div>
       <div className={`nav-links ${isHamburgerOpen ? 'open' : ' '}`}>
