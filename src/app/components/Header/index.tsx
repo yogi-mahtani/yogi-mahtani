@@ -2,10 +2,11 @@
 
 import { useState } from 'react';
 
-import { Logo } from '../Logo';
-import { Links } from '../../Utils/Links';
-import Hamburger from '../Hamburger';
+// components | constants
+import { Logo, Hamburger } from '@/app/components';
+import { NAV_LINKS } from '@/app/constants';
 
+// styles
 import './index.css';
 
 const Header: React.FC = () => {
@@ -16,18 +17,19 @@ const Header: React.FC = () => {
   };
 
   const menus = () => {
+    const { about, offerings, resources } = NAV_LINKS;
     let links = [
-      { name: 'About', url: Links.NAV_LINKS.AboutUS },
-      { name: 'Offering', url: Links.NAV_LINKS.Offerings },
-      { name: 'Resources', url: Links.NAV_LINKS.Resources },
+      { name: 'About', url: about },
+      { name: 'Offering', url: offerings },
+      { name: 'Resources', url: resources },
     ];
     return links.map((link) => (
       <div
-        key={link.name}
+        key={link.url}
         className="nav-link"
         onClick={() => handleNavLinkClick(link.url)}
       >
-        {link.name}{' '}
+        {link.name}
       </div>
     ));
   };
@@ -41,7 +43,7 @@ const Header: React.FC = () => {
       <div className="hamburgerContainer">
         <Logo></Logo>
         <Hamburger
-          onClick={hamburgerClicked}
+          handleClick={hamburgerClicked}
           active={`hamburger ${isHamburgerOpen ? 'active' : ''}`}
         />
       </div>

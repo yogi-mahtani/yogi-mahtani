@@ -6,7 +6,6 @@ const nextConfig: NextConfig = {
   },
   turbo: {
     resolveExtensions: ['.mdx', '.tsx', '.ts', '.jsx', '.js', '.mjs', '.json'],
-    turbo: true,
     rules: {
       '*.svg': {
         loaders: ['@svgr/webpack'],

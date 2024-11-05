@@ -1,4 +1,4 @@
-import { Header, HomeHeading, Footer } from './components';
+import { Header, HomeHeading, Footer } from '@/app/components';
 
 export default function Home() {
   return (

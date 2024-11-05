@@ -1,13 +1,13 @@
 import './index.css';
 
 type HamburgerProps = {
-  onClick: () => void;
+  handleClick: () => void;
   active: string;
 };
 
-const Hamburger = ({ onClick, active }: HamburgerProps) => {
+const Hamburger = ({ handleClick, active }: HamburgerProps) => {
   return (
-    <div className={`hamburger ${active}`} onClick={onClick}>
+    <div className={`hamburger ${active}`} onClick={handleClick}>
       <div className="ham-itm1"></div>
       <div className="ham-itm2"></div>
       <div className="ham-itm3"></div>
