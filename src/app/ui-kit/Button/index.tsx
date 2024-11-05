@@ -51,7 +51,7 @@ const buttonVariants = css<ButtonProps>`
       : css`
           color: #fff;
           background-color: #000;
-          border: none;
+          border: 1px solid #000;
           transition: all 0.3s ease;
           &:hover {
             background-color: #333;

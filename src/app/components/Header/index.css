@@ -11,6 +11,8 @@
   justify-content: space-between;
   margin: 1rem 0 1rem 0;
   align-items: center;
+  padding: 16px 64px;
+  border-bottom: 1px solid var(--grey-scale-100);
 }
 
 .nav-links {
@@ -22,17 +24,31 @@
   padding: 1rem;
 }
 
-@media only screen and (max-width: 480px) {
-  .nav-links {
+.btn-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.right-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media only screen and (max-width: 600px) {
+  .right-section {
     display: none;
   }
 
   .nav-bar {
     flex-direction: column;
     align-items: unset;
+    padding: 8px 32px;
   }
 
-  .nav-links.open {
+  .right-section.open {
     display: flex;
     flex-direction: column;
   }

@@ -4,6 +4,7 @@ import { useState } from 'react';
 
 // components | constants
 import { Logo, HamburgerMenu } from '@/app/components';
+import Button from '@/app/ui-kit/Button';
 import { NAV_LINKS } from '@/app/constants';
 
 // styles
@@ -53,8 +54,18 @@ const Header: React.FC = () => {
           active={isHamburgerOpen}
         />
       </div>
-      <div className={`nav-links ${isHamburgerOpen ? 'open' : ' '}`}>
-        {menus()}
+      <div className={`right-section ${isHamburgerOpen ? 'open' : ' '}`}>
+        <div className="nav-links">{menus()}</div>
+        <div className="btn-wrapper">
+          <Button
+            variant="outlined"
+            color="var(--color-orange)"
+            bordercolor="var(--color-orange)"
+          >
+            Jobs
+          </Button>
+          <Button variant="filled">Find Talent</Button>
+        </div>
       </div>
     </div>
   );
