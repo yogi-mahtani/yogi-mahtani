@@ -1,6 +1,7 @@
 'use client';
 
-import React, { useState } from 'react';
+import { useState } from 'react';
+
 import { Logo } from '../Logo';
 import { Links } from '../../Utils/Links';
 import Hamburger from '../Hamburger';
