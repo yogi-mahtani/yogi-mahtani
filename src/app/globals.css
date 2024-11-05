@@ -1,3 +1,7 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
 :root {
   /* Typography */
   --font-size-h1-desktop: 56px;
