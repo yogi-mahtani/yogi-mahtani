@@ -55,17 +55,15 @@ const Header: React.FC = () => {
         />
       </div>
       <div className={`right-section ${isHamburgerOpen ? 'open' : ' '}`}>
-        <div className="nav-links">{menus()}</div>
-        <div className="btn-wrapper">
-          <Button
-            variant="outlined"
-            color="var(--color-orange)"
-            bordercolor="var(--color-orange)"
-          >
-            Jobs
-          </Button>
-          <Button variant="filled">Find Talent</Button>
-        </div>
+        {menus()}
+        <Button
+          variant="outlined"
+          color="var(--color-orange)"
+          bordercolor="var(--color-orange)"
+        >
+          Jobs
+        </Button>
+        <Button variant="filled">Find Talent</Button>
       </div>
     </div>
   );

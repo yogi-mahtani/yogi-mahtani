@@ -20,10 +20,6 @@
   flex-wrap: wrap;
 }
 
-.nav-link {
-  padding: 1rem;
-}
-
 .btn-wrapper {
   display: flex;
   align-items: center;
@@ -34,7 +30,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  gap: 24px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -50,13 +46,18 @@
 
   .right-section.open {
     display: flex;
+    align-items: flex-start;
     flex-direction: column;
+    align-items: flex-start;
+    margin-top: 40px;
+    button {
+      width: 100%;
+    }
   }
 
   .hamburgerContainer {
     display: flex;
     gap: 20px;
-    padding: 10px;
     justify-content: space-between;
   }
 }
