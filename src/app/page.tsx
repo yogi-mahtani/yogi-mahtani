@@ -1,13 +1,11 @@
-import { Header } from './components';
-import { HomeHeading } from './components/HomeHeading';
-import { Footer } from './components/Footer';
+import { Header, HomeHeading, Footer } from './components';
 
 export default function Home() {
   return (
     <>
       <Header />
-      <HomeHeading/>
-      <Footer/>
+      <HomeHeading />
+      <Footer />
     </>
   );
 }

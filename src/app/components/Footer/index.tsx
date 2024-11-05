@@ -1,9 +1,15 @@
 'use client';
-import Logo from '../Logo';
-import './index.css';
+
+// Components
 import { Divider } from './Divider';
 
-export function Footer() {
+// Assets
+import Logo from '../Logo';
+
+// Styles
+import './index.css';
+
+const Footer = () => {
   const supportPageLinks = () => {
     let pages = ['About Us', 'Services', 'Contact Us', 'FAQ', 'Blog'];
     return pages.map((page) => (
@@ -65,4 +71,6 @@ export function Footer() {
       </div>
     </div>
   );
-}
+};
+
+export default Footer;

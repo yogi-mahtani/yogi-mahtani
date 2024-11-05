@@ -1,13 +1,15 @@
 'use client';
 
-import './index.css';
+import { useRef, useEffect } from 'react';
 import Typed from 'typed.js';
-import React from 'react';
 
-export function HomeHeading() {
-  const profestionEle = React.useRef(null);
-  const sectorEle = React.useRef(null);
-  const marketEle = React.useRef(null);
+// styles
+import './index.css';
+
+const HomeHeading = () => {
+  const profestionEle = useRef(null);
+  const sectorEle = useRef(null);
+  const marketEle = useRef(null);
   const animationConfig = {
     typeSpeed: 100,
     loop: true,
@@ -15,7 +17,7 @@ export function HomeHeading() {
     backDelay: 1000,
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     const productAni = new Typed(profestionEle.current, {
       strings: ['Product Manager', 'Software Developer'],
       ...animationConfig,
@@ -38,25 +40,25 @@ export function HomeHeading() {
   }, []);
 
   return (
-    <>
-      <div className="intro">
-        <div className="intro-heading">
-          Looking for{' '}
-          <span className="colored-heading">
-            {' '}
-            <span ref={profestionEle} />
-          </span>
-        </div>
-        <div className="intro-heading">
-          with <span className="colored-heading">Fintech</span> Experience in{' '}
-          <span className="colored-heading" ref={sectorEle} />,
-        </div>
-        <div className="intro-heading">
-          Covering the <span className="colored-heading" ref={marketEle}></span>{' '}
-          Market
-        </div>
-        <div>Recruit with Product and Technology Functional Experts</div>
+    <div className="intro">
+      <div className="intro-heading">
+        Looking for{' '}
+        <span className="colored-heading">
+          {' '}
+          <span ref={profestionEle} />
+        </span>
       </div>
-    </>
+      <div className="intro-heading">
+        with <span className="colored-heading">Fintech</span> Experience in{' '}
+        <span className="colored-heading" ref={sectorEle} />,
+      </div>
+      <div className="intro-heading">
+        Covering the <span className="colored-heading" ref={marketEle}></span>{' '}
+        Market
+      </div>
+      <div>Recruit with Product and Technology Functional Experts</div>
+    </div>
   );
-}
+};
+
+export default HomeHeading;

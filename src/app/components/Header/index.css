@@ -25,7 +25,6 @@
 @media only screen and (max-width: 480px) {
   .nav-links {
     display: none;
-    /* flex-direction: column; */
   }
 
   .nav-bar {

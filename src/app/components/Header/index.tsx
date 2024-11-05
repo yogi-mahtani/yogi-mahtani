@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { Logo } from '../Logo';
 import { Links } from '../../Utils/Links';
-// import Hamburger from '../Hamburger';
+import Hamburger from '../Hamburger';
 
 import './index.css';
 
@@ -32,20 +32,17 @@ const Header: React.FC = () => {
   };
 
   const hamburgerClicked = (): void => {
-    let hamburger = document.querySelector('.hamburger');
-    if (!isHamburgerOpen) {
-      hamburger?.classList.add('active');
-    } else {
-      hamburger?.classList.remove('active');
-    }
-    setIsHamburgerOpen(!isHamburgerOpen);
+    setIsHamburgerOpen((prev) => !prev);
   };
 
   return (
     <div className="flex nav-bar">
       <div className="hamburgerContainer">
         <Logo></Logo>
-        {/* <Hamburger onClick={hamburgerClicked} /> */}
+        <Hamburger
+          onClick={hamburgerClicked}
+          active={`hamburger ${isHamburgerOpen ? 'active' : ''}`}
+        />
       </div>
       <div className={`nav-links ${isHamburgerOpen ? 'open' : ' '}`}>
         {menus()}
