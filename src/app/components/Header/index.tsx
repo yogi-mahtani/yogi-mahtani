@@ -3,11 +3,17 @@
 import { useState } from 'react';
 
 // components | constants
-import { Logo, Hamburger } from '@/app/components';
+import { Logo, HamburgerMenu } from '@/app/components';
 import { NAV_LINKS } from '@/app/constants';
 
 // styles
 import './index.css';
+interface Link {
+  name: string;
+  url: string;
+}
+
+type Links = Link[];
 
 const Header: React.FC = () => {
   const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
@@ -18,7 +24,7 @@ const Header: React.FC = () => {
 
   const menus = () => {
     const { about, offerings, resources } = NAV_LINKS;
-    let links = [
+    let links: Links = [
       { name: 'About', url: about },
       { name: 'Offering', url: offerings },
       { name: 'Resources', url: resources },
@@ -41,8 +47,8 @@ const Header: React.FC = () => {
   return (
     <div className="flex nav-bar">
       <div className="hamburgerContainer">
-        <Logo></Logo>
-        <Hamburger
+        <Logo />
+        <HamburgerMenu
           handleClick={hamburgerClicked}
           active={`hamburger ${isHamburgerOpen ? 'active' : ''}`}
         />
