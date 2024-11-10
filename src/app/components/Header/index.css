@@ -35,7 +35,14 @@
 
 @media only screen and (max-width: 600px) {
   .right-section {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-height: 0; /* Start with max-height 0 to hide it */
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    /* display: none; */
   }
 
   .nav-bar {
@@ -45,14 +52,20 @@
   }
 
   .right-section.open {
-    display: flex;
+    /* display: flex;
     align-items: flex-start;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-start; */
+    max-height: 500px; /* Or set an appropriate height to fit content */
+    opacity: 1;
+    margin-top: 40px;
+
     margin-top: 40px;
     button {
       width: 100%;
     }
+    transition: max-height 0.3s ease-in, opacity 0.3s ease;
+
   }
 
   .hamburgerContainer {

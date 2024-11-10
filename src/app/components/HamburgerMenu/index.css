@@ -33,13 +33,22 @@
   }
 
   .hamburger.active .ham-itm1 {
-    transform: rotate(45deg);
-    top: 37px;
+    top:10px;
     position: absolute;
   }
 
   .hamburger.active .ham-itm3 {
-    transform: rotate(-45deg);
-    bottom: 10px;
+    bottom: 7px;
   }
+
+  .hamburger.active .ham-itm1 {
+    transform: rotate(45deg);
+    top: 37px;
+  
+  }
+
+  .hamburger.active .ham-itm3 {
+  	transform: rotate(-45deg);
+  }
+
 }

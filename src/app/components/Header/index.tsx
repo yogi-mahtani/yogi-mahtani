@@ -72,7 +72,10 @@ const Header: React.FC = () => {
         >
           Jobs
         </Button>
-        <Button variant="filled">Find Talent</Button>
+        <Button variant="filled"
+        color="var(--color-brand-white)"
+        backgroundcolor="var(--color-brand-black)"
+        >Find Talent</Button>
       </div>
     </div>
   );

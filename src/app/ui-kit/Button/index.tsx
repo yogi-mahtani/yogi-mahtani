@@ -28,11 +28,12 @@ type ButtonProps = {
   onClick?: () => void;
   bordercolor?: string;
   color?: string;
+  backgroundcolor?:string,
   children?: React.ReactNode;
 };
 
 const buttonVariants = css<ButtonProps>`
-  ${({ variant, bordercolor, color }) =>
+  ${({ variant, bordercolor, color ,backgroundcolor}) =>
     variant === 'outlined'
       ? css`
           color: ${color};
@@ -54,7 +55,8 @@ const buttonVariants = css<ButtonProps>`
           border: 1px solid #000;
           transition: all 0.3s ease;
           &:hover {
-            background-color: #333;
+            background-color: ${color};
+            color:${backgroundcolor}
             transform: scale(1.05); // Slight scale-up effect on hover
           }
           &:active {
@@ -96,6 +98,7 @@ const Button: React.FC<ButtonProps> = ({
   onClick,
   bordercolor,
   color,
+  backgroundcolor,
   children,
 }) => {
   return (
@@ -105,6 +108,7 @@ const Button: React.FC<ButtonProps> = ({
       color={color}
       onClick={onClick}
       bordercolor={bordercolor}
+      backgroundcolor={backgroundcolor}
     >
       {showIcon && iconPosition === 'left' && <CubeIcon />}
       {children}
