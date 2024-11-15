@@ -15,7 +15,7 @@ const SupportPageLinks = () => {
     { title: 'About Us', href: NAV_LINKS.about },
     { title: 'Offering', href: NAV_LINKS.offerings },
     { title: 'Resources', href: NAV_LINKS.resources },
-    { title: 'Contact Us', href: '/contact' },
+    { title: 'Contact Us', href: 'https://wa.me/+6581502247' },
   ];
 
   return pages.map((page) => (

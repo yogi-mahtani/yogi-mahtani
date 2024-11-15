@@ -14,7 +14,7 @@ const ContactLinks = () => {
   const contactLinks: ContactLink[] = [
     {
       title: 'Email',
-      value: 'Leadconsultant@fynder.com',
+      value: 'consultant@fyndertalent.com',
       img: '/icons/email.svg',
     },
     {
