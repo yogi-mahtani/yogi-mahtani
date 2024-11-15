@@ -1,43 +1,38 @@
-.intro{
-    display: flex;
-    background-size: contain;
-    background-size: 100% 100%;
-    object-fit: cover;
-    flex-direction: column;
-    align-items: center; 
-   margin:85px 45px 85px 45px;
-   /* background-image: url('../../../../public/backgroundimage.png');
-   background-repeat:no-repeat;
-    background-size:contain;
-    background-position:center; */
+.intro {
+  display: flex;
+  background-size: contain;
+  background-size: 100% 100%;
+  object-fit: cover;
+  flex-direction: column;
+  align-items: center;
+  margin: 85px 45px 85px 45px;
 }
-.intro-heading{
-    font-weight: 700;
-    font-family: 'Roboto';
-     font-size:2.8rem;
-  
+.intro-heading {
+  font-weight: 700;
+  font-family: 'Roboto';
+  font-size: 2.8rem;
 }
 
+.colored-heading {
+  background: -webkit-linear-gradient(
+    rgba(255, 48, 48, 1),
+    rgba(255, 0, 160, 0.8)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
+.minor-heading {
+  margin-top: 8px;
+}
 
-.colored-heading  {
-    background: -webkit-linear-gradient(rgba(255, 48, 48, 1),rgba(255, 0, 160, 0.8));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.button-container {
+  margin-top: 30px;
+}
+
+@media only screen and (max-width: 480px) {
+  .intro-heading {
+    font-size: 1.2rem;
   }
-
-.minor-heading{
-    margin-top: 8px;
-}  
-
-.button-container{
-    margin-top: 30px;
-}
-  
-  @media only screen and (max-width:480px) {
-
-    .intro-heading{
-        font-size:1.2rem;
-    }
-
 }
