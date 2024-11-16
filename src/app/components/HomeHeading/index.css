@@ -1,11 +1,15 @@
-.intro {
-  display: flex;
-  background-size: contain;
-  background-size: 100% 100%;
-  object-fit: cover;
-  flex-direction: column;
-  align-items: center;
-  margin: 85px 45px 85px 45px;
+.intro{
+    display: flex;
+    background-size: contain;
+    background-size: 100% 100%;
+    object-fit: cover;
+    flex-direction: column;
+    align-items: center; 
+   margin:85px 45px 85px 45px;
+   /* background-image: url('../../../../public/HeroHeaderImage1.svg');
+   background-repeat:no-repeat;
+    background-size:contain;
+    background-position:center; */
 }
 .intro-heading {
   font-weight: 700;
@@ -31,8 +35,40 @@
   margin-top: 30px;
 }
 
+.minor-heading {
+    display: flex;
+}
+
+.minor-heading-mob {
+    display: none;
+}
+
 @media only screen and (max-width: 480px) {
   .intro-heading {
     font-size: 1.2rem;
   }
+
+  .intro{
+    margin:40px;
+    background-image: unset;
 }
+
+.minor-heading{
+    font-size: 12px;
+    text-align: center;
+}
+.minor-heading {
+    display: none;
+}
+
+.minor-heading-mob {
+ display: block;
+ text-align: center;
+ font-size: 14px;
+}
+.minor-heading-mob:nth-of-type(1){
+    margin-top: 30px;
+}
+
+}
+  
