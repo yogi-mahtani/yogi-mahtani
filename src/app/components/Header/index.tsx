@@ -4,8 +4,9 @@ import { useState } from 'react';
 import Link from 'next/link';
 
 // components | constants
-import { Logo, HamburgerMenu } from '@/app/components';
+import { HamburgerMenu } from '@/app/components';
 import Button from '@/app/ui-kit/Button';
+import SvgImage from '../SvgImage';
 import { NAV_LINKS, BUTTON_LINKS } from '@/app/constants';
 
 // styles
@@ -32,7 +33,7 @@ const Header: React.FC = () => {
   const menus = (): JSX.Element => {
     const { about, offerings, resources } = NAV_LINKS;
 
-    const links: Link[] = [
+    const links: Links = [
       { name: 'About', url: about },
       { name: 'Offering', url: offerings },
       { name: 'Resources', url: resources },
@@ -56,7 +57,9 @@ const Header: React.FC = () => {
   return (
     <div className="flex nav-bar">
       <div className="hamburgerContainer">
-        <Logo />
+        <Link href={'htpps://fyndertalent.com'}>
+          <SvgImage path={'/icons/brand-logo.svg'} width={182} height={35} />
+        </Link>
         <HamburgerMenu
           handleClick={hamburgerClicked}
           active={isHamburgerOpen}
@@ -72,10 +75,13 @@ const Header: React.FC = () => {
         >
           Jobs
         </Button>
-        <Button variant="filled"
-        color="var(--color-brand-white)"
-        backgroundcolor="var(--color-brand-black)"
-        >Find Talent</Button>
+        <Button
+          variant="filled"
+          color="var(--color-brand-white)"
+          backgroundcolor="var(--color-brand-black)"
+        >
+          Find Talent
+        </Button>
       </div>
     </div>
   );
