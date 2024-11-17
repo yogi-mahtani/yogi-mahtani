@@ -15,7 +15,7 @@ const HomeHeading = () => {
     typeSpeed: 100,
     loop: true,
     loopCount: Infinity,
-    backDelay: 1000,
+    backDelay: 2000,
   };
 
   useEffect(() => {
@@ -93,6 +93,8 @@ const HomeHeading = () => {
       <div className="minor-heading">
         across talents in emerging markets . Get in touch
       </div>
+      <p className='minor-heading-mob'>Helping buisness recruit across with Product & Technology Companies and{' '} across talents in emerging markets </p>
+      <p className='minor-heading-mob'>Get in touch</p>
       <div className="button-container">
         <Button variant="filled">Enquire now</Button>
       </div>

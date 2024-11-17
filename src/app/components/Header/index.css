@@ -20,6 +20,13 @@
   flex-wrap: wrap;
 }
 
+.nav-link:hover{
+  background:-webkit-linear-gradient(rgba(255, 48, 48, 1),rgba(255, 0, 160, 0.8));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}
+
 .btn-wrapper {
   display: flex;
   align-items: center;
