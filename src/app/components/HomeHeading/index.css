@@ -29,15 +29,14 @@
 
 .minor-heading {
   margin-top: 8px;
+  display: flex;
+  text-align: center;
 }
 
 .button-container {
   margin-top: 30px;
 }
 
-.minor-heading {
-    display: flex;
-}
 
 .minor-heading-mob {
     display: none;
@@ -54,21 +53,20 @@
 }
 
 .minor-heading{
-    font-size: 12px;
+    font-size: .8rem;
     text-align: center;
-}
-.minor-heading {
-    display: none;
-}
-
-.minor-heading-mob {
- display: block;
- text-align: center;
- font-size: 14px;
-}
-.minor-heading-mob:nth-of-type(1){
-    margin-top: 30px;
 }
 
 }
   
+
+
+
+@media only screen and (max-width:600px) {
+  .intro-heading {
+    font-size: 1.8rem;
+  }
+  .minor-heading {
+    font-size: .8rem;
+  }
+}

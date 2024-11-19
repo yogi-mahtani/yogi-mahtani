@@ -1,0 +1,30 @@
+.cursor-ani{
+    font-weight: 100;
+    font-size: 3rem;
+    color:var(--color-orange);
+    animation: blink 1s step-end infinite;
+    margin-left: -5px;
+}
+
+@keyframes blink {
+    from,to{
+        color:transparent;
+    }
+
+    50%{
+        color:var(--color-orange);
+    }
+}
+
+@media only screen and (max-width:480px) {
+    .cursor-ani{
+    font-size: 1.5rem;
+    }
+}
+
+
+@media only screen and (max-width:600px) {
+    .cursor-ani{
+    font-size: 1.8rem;
+    }
+}
