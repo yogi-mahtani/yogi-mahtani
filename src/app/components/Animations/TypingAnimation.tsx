@@ -1,7 +1,7 @@
 'use client';
 import { useEffect, useState,useRef } from 'react';
 import './index.css';
-import { CursorAni } from '../CursorAni';
+import { CursorAnimation } from '../CursorAnimation';
 import { animationConfigs } from '@/app/constants';
 
 interface TypingAnimationProps{
@@ -42,7 +42,7 @@ const typing = (index:number)=>{
 
 };
 
-   return <div className="text-container"> <span className='text'> {text} </span> <CursorAni/></div>; 
+   return <div className="text-container"> <span className='text'> {text} </span> <CursorAnimation/></div>; 
 
 }
 
