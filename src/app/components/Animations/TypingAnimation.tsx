@@ -4,7 +4,14 @@ import './index.css';
 import { CursorAni } from '../CursorAni';
 import { animationConfigs } from '@/app/constants';
 
-function TypingAnimation(props){
+interface TypingAnimationProps{
+    strings: string[],
+    toggle: boolean,
+    id: number,
+    isCompleted: ()=>void
+} 
+
+function TypingAnimation(props:TypingAnimationProps){
 const [strings] = useState(props?.strings?props.strings:[]);
 const [currentIndex,setCurrentIndex] = useState(0);
 const [text,setText] = useState('');
