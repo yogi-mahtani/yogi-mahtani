@@ -1,7 +1,6 @@
 'use client';
 
-import { useRef, useEffect, useState } from 'react';
-import Typed from 'typed.js';
+import { useEffect, useState } from 'react';
 
 // styles
 import './index.css';
@@ -9,10 +8,9 @@ import Button from '@/app/ui-kit/Button';
 import TypingAnimation from '../Animations/TypingAnimation';
 
 const HomeHeading = () => {
-    let ids = [1,2,3];
     const [completed,setCompleted] = useState(0); 
-    const [toggle,setToggle] = useState(false)
-  let productsStr = [
+    const [toggle,setToggle] = useState(false);
+  const productsStr = [
     'Product Leader',
     'Product Designer',
     'VP Engineering',
@@ -23,7 +21,7 @@ const HomeHeading = () => {
     'DevOps',
     'DevOps',
   ];
-  let sectorStrs = [
+  const sectorStrs = [
     'Adtech Industry in DSPs',
     'AI Space in the Retail Tech industry',
     'Virtual Banks',
@@ -34,7 +32,7 @@ const HomeHeading = () => {
     'Blockchain',
     'B2B Payments',
   ];
-  let regions = [
+  const regions = [
     'APAC',
     'SEA',
     'Vietnam',
@@ -52,9 +50,9 @@ const HomeHeading = () => {
       }
   }, [completed]);
 
-  const isCompleted = (id)=>{
+  const isCompleted = ()=>{
     setCompleted((count)=> count+1);
-  }
+  };
 
   return (
     <div className="intro">

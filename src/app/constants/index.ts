@@ -32,4 +32,4 @@ export const BUTTON_LINKS: ButtonLinks = {
 export const animationConfigs: AnimationConfigs = {
   speed: 100,
   waitTime: 1000
-}
+};
