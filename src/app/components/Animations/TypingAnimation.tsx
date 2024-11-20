@@ -15,7 +15,6 @@ function TypingAnimation(props:TypingAnimationProps){
 const [strings] = useState(props?.strings?props.strings:[]);
 const [currentIndex,setCurrentIndex] = useState(0);
 const [text,setText] = useState('');
-const [id] = useState(props.id);
 const didMount = useRef(false);
 
 useEffect(()=>{
@@ -34,7 +33,7 @@ const typing = (index:number)=>{
     const str = strings[currentIndex];
   
     if(index === str.length){
-      props.isCompleted(id);
+      props.isCompleted();
     }else 
     setTimeout(()=>{
         setText((txt)=> txt + str.charAt(index));
