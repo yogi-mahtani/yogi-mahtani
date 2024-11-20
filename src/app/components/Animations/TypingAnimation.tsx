@@ -42,7 +42,7 @@ const typing = (index:number)=>{
 
 };
 
-   return <div className="text">{text} <CursorAni/></div>; 
+   return <div className="text-container"> <span className='text'> {text} </span> <CursorAni/></div>; 
 
 }
 

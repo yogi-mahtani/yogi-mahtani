@@ -1,19 +1,35 @@
 
 
-.text {
-    font-size: 3rem;
+.text-container {
+    min-height: 3.5;
     color: var(--color-orange);
+    text-align: center;
+}
+.text {
+    font-size: var(--animation-heading-font-size);
+    color: var(--color-orange);
+    font-weight: bold;
 }
 
 @media only screen and (max-width:480px) {
-    .text{
-    font-size: 1.6rem;
+    .text-container{
+     min-height: 2.2rem;
+     min-width: 10rem;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+    }
+    .text {
+        font-size: var(--animation-heading-font-size-mobile) !important;
     }
 }
 
 
-@media only screen and (max-width:600px) {
-    .text{
-    font-size: 1.8rem;
+@media only screen and (min-width:480px) and (max-width:768px) {
+    .text-container{
+    min-height: 2.5rem;
     }
+    .text {
+        font-size: var(--animation-heading-font-size-tablet);
+       }
 }

@@ -1,6 +1,6 @@
 .cursor-ani{
     font-weight: 100;
-    font-size: 3rem;
+    font-size: var(--animation-heading-font-size);
     color:var(--color-orange);
     animation: blink 1s step-end infinite;
     margin-left: -5px;
@@ -18,13 +18,14 @@
 
 @media only screen and (max-width:480px) {
     .cursor-ani{
-    font-size: 1.5rem;
+    font-size: var(--animation-heading-font-size-mobile) !important;
+    margin-left: .1rem;
     }
 }
 
 
-@media only screen and (max-width:600px) {
+@media only screen and (max-width:768px) {
     .cursor-ani{
-    font-size: 1.8rem;
+    font-size: var(--animation-heading-font-size-tablet);
     }
 }

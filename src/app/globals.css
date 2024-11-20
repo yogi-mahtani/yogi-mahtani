@@ -71,6 +71,10 @@ body {
   --link-primary: var(--grey-scale-800); /* black */
   --link-secondary: var(--grey-scale-400); /* neutral */
   --link-alternate: var(--grey-scale-0); /* white */
+
+  --animation-heading-font-size : 3rem;
+  --animation-heading-font-size-mobile : 1rem;
+  --animation-heading-font-size-tablet : 2rem;
 }
 
 /* CSS Reset */

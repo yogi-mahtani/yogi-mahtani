@@ -18,7 +18,7 @@
   padding: 80px 64px;
   flex-wrap: wrap;
 
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     padding: 48px 20px;
     gap: 48px;
   }
@@ -67,7 +67,7 @@
   align-items: center;
   flex-wrap: wrap;
 
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     padding: 24px 0 16px 0;
   }
 }
@@ -93,7 +93,7 @@
     text-decoration: underline;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     h6 {
       font-size: 24px;
       font-weight: 700;
@@ -111,12 +111,12 @@
   font-weight: 600;
   line-height: 150%;
 
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     text-align: center;
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   .footer-contact-page-links-container {
     flex-direction: column;
   }
