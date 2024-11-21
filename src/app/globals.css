@@ -73,7 +73,7 @@ body {
   --link-alternate: var(--grey-scale-0); /* white */
 
   --animation-heading-font-size: 4rem;
-  --animation-heading-font-size-mobile: 1.5rem;
+  --animation-heading-font-size-mobile: 1.25rem;
   --animation-heading-font-size-tablet: 2.8rem;
   --text-orange-and-pink-gradient: linear-gradient(
     to right,
