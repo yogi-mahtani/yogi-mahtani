@@ -1,15 +1,19 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { css } from 'styled-components';
 
-// styles
-import './index.css';
+// components
 import Button from '@/app/ui-kit/Button';
 import TypingAnimation from '../Animations/TypingAnimation';
 
+// styles
+import './index.css';
+
 const HomeHeading = () => {
-    const [completed,setCompleted] = useState(0); 
-    const [toggle,setToggle] = useState(false);
+  const [completed, setCompleted] = useState(0);
+  const [toggle, setToggle] = useState(false);
+
   const productsStr = [
     'Product Leader',
     'Product Designer',
@@ -43,28 +47,54 @@ const HomeHeading = () => {
     'EMEA',
     'Asia',
   ];
+
   useEffect(() => {
-      if(completed === 3) {
-        setToggle(!toggle);
-        setCompleted(0);
-      }
+    if (completed === 3) {
+      setToggle(!toggle);
+      setCompleted(0);
+    }
   }, [completed]);
 
-  const isCompleted = ()=>{
-    setCompleted((count)=> count+1);
+  const isCompleted = () => {
+    setCompleted((count) => count + 1);
   };
 
   return (
     <div className="intro">
       <div className="intro-heading">Looking for your next </div>
-      <TypingAnimation toggle = {toggle} isCompleted = {isCompleted} id= {1}  strings = {productsStr}></TypingAnimation>
+      <TypingAnimation
+        toggle={toggle}
+        isCompleted={isCompleted}
+        id={1}
+        strings={productsStr}
+      />
       <div className="intro-heading">with experience in </div>
-      <TypingAnimation toggle = {toggle} id= {2}  isCompleted = {isCompleted} strings = {sectorStrs}></TypingAnimation>
+      <TypingAnimation
+        toggle={toggle}
+        id={2}
+        isCompleted={isCompleted}
+        strings={sectorStrs}
+      />
       <div className="intro-heading">covering</div>
-      <TypingAnimation toggle = {toggle} id = {3}  isCompleted = {isCompleted} strings = {regions}></TypingAnimation>
-      <p className='minor-heading'>Helping Product & Technology Businesses find and <br/> access Talent in emerging markets </p>
+      <TypingAnimation
+        toggle={toggle}
+        id={3}
+        isCompleted={isCompleted}
+        strings={regions}
+      />
+      <p className="minor-heading">
+        Helping Product & Technology Businesses find and <br /> access Talent in
+        emerging markets{' '}
+      </p>
       <div className="button-container">
-        <Button variant="filled">Enquire now</Button>
+        <Button
+          size="large"
+          variant="filled"
+          color="var(--color-brand-white)"
+          backgroundcolor="var(--color-brand-black)"
+        >
+          Enquire Now
+        </Button>
       </div>
     </div>
   );

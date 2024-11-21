@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled, { css, CSSProp } from 'styled-components';
 
 const CubeIcon = () => (
   <svg
@@ -28,12 +28,13 @@ type ButtonProps = {
   onClick?: () => void;
   bordercolor?: string;
   color?: string;
-  backgroundcolor?:string,
+  backgroundcolor?: string;
   children?: React.ReactNode;
+  btnStyles?: CSSProp;
 };
 
 const buttonVariants = css<ButtonProps>`
-  ${({ variant, bordercolor, color ,backgroundcolor}) =>
+  ${({ variant, bordercolor, color, backgroundcolor, btnStyles }) =>
     variant === 'outlined'
       ? css`
           color: ${color};
@@ -63,16 +64,22 @@ const buttonVariants = css<ButtonProps>`
             transform: scale(0.98); // Slight scale-down effect on click
           }
         `}
+  ${({ btnStyles }) => (btnStyles ? btnStyles : '')};
 `;
 
 // Size styles for the button
 const buttonSizes = css<ButtonProps>`
-  ${({ size }) =>
-    size === 'small'
-      ? 'padding: 6px 12px; font-size: 14px;'
-      : size === 'large'
-        ? 'padding: 10px 24px; font-size: 16px;'
-        : 'padding: 8px 20px; font-size: 14px;'}
+  ${({ size }) => {
+    switch (size) {
+      case 'small':
+        return 'padding: 6px 12px; font-size: 14px;';
+      case 'medium':
+        return 'padding: 8px 20px; font-size: 14px;';
+      case 'large':
+        return 'padding: 10px 24px; font-size: 16px;';
+    }
+    return;
+  }}
 `;
 
 const StyledButton = styled.button<ButtonProps>`
@@ -100,6 +107,7 @@ const Button: React.FC<ButtonProps> = ({
   color,
   backgroundcolor,
   children,
+  btnStyles,
 }) => {
   return (
     <StyledButton
@@ -107,6 +115,7 @@ const Button: React.FC<ButtonProps> = ({
       size={size}
       color={color}
       onClick={onClick}
+      btnStyles={btnStyles}
       bordercolor={bordercolor}
       backgroundcolor={backgroundcolor}
     >

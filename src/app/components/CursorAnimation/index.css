@@ -1,31 +1,31 @@
-.cursor-ani{
-    font-weight: 100;
-    font-size: var(--animation-heading-font-size);
-    color:var(--color-orange);
-    animation: blink 1s step-end infinite;
-    margin-left: -5px;
+.cursor-animation {
+  font-weight: 100;
+  font-size: var(--animation-heading-font-size);
+  color: var(--color-orange);
+  animation: blink 1s step-end infinite;
+  margin-left: -5px;
 }
 
 @keyframes blink {
-    from,to{
-        color:transparent;
-    }
+  from,
+  to {
+    color: transparent;
+  }
 
-    50%{
-        color:var(--color-orange);
-    }
+  50% {
+    color: var(--color-orange);
+  }
 }
 
-@media only screen and (max-width:480px) {
-    .cursor-ani{
-    font-size: var(--animation-heading-font-size-mobile) !important;
-    margin-left: .1rem;
-    }
+@media only screen and (max-width: 480px) {
+  .cursor-animation {
+    font-size: var(--animation-heading-font-size-mobile);
+    margin-left: 0.1rem;
+  }
 }
 
-
-@media only screen and (max-width:768px) {
-    .cursor-ani{
+@media only screen and (max-width: 768px) {
+  .cursor-animation {
     font-size: var(--animation-heading-font-size-tablet);
-    }
+  }
 }

@@ -1,49 +1,61 @@
 'use client';
-import { useEffect, useState,useRef } from 'react';
-import './index.css';
+import { useEffect, useState, useRef } from 'react';
+
+// Components | Constants
 import { CursorAnimation } from '../CursorAnimation';
 import { animationConfigs } from '@/app/constants';
 
-interface TypingAnimationProps{
-    strings: string[],
-    toggle: boolean,
-    id: number,
-    isCompleted: ()=>void
-} 
+// styles
+import './index.css';
 
-function TypingAnimation(props:TypingAnimationProps){
-const [strings] = useState(props?.strings?props.strings:[]);
-const [currentIndex,setCurrentIndex] = useState(0);
-const [text,setText] = useState('');
-const didMount = useRef(false);
+interface TypingAnimationProps {
+  strings: string[];
+  toggle: boolean;
+  id: number;
+  isCompleted: () => void;
+}
 
-useEffect(()=>{
-    setText(()=>'');
+function TypingAnimation(props: TypingAnimationProps) {
+  const [strings] = useState(props?.strings ? props.strings : []);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [text, setText] = useState('');
+  const didMount = useRef(false);
+
+  useEffect(() => {
+    setText(() => '');
     typing(0);
-},[currentIndex]);
+  }, [currentIndex]);
 
-useEffect(()=>{ 
-    if(didMount.current === false)
-        didMount.current = true;
+  useEffect(() => {
+    if (didMount.current === false) didMount.current = true;
     else
-    setTimeout(()=>setCurrentIndex(currentIndex === (strings.length - 1)? 0:currentIndex+1),animationConfigs.waitTime);
-},[props.toggle]);
+      setTimeout(
+        () =>
+          setCurrentIndex(
+            currentIndex === strings.length - 1 ? 0 : currentIndex + 1
+          ),
+        animationConfigs.waitTime
+      );
+  }, [props.toggle]);
 
-const typing = (index:number)=>{
+  const typing = (index: number) => {
     const str = strings[currentIndex];
-  
-    if(index === str.length){
+
+    if (index === str.length) {
       props.isCompleted();
-    }else 
-    setTimeout(()=>{
-        setText((txt)=> txt + str.charAt(index));
-        typing(index+1);
-    },animationConfigs.speed);
+    } else
+      setTimeout(() => {
+        setText((txt) => txt + str.charAt(index));
+        typing(index + 1);
+      }, animationConfigs.speed);
+  };
 
-};
-
-   return <div className="text-container"> <span className='text'> {text} </span> <CursorAnimation/></div>; 
-
+  return (
+    <div className="text-container">
+      {' '}
+      <span className="text"> {text} </span> <CursorAnimation />
+    </div>
+  );
 }
 
 export default TypingAnimation;
