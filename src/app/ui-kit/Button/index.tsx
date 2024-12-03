@@ -34,7 +34,7 @@ type ButtonProps = {
 };
 
 const buttonVariants = css<ButtonProps>`
-  ${({ variant, bordercolor, color, backgroundcolor, btnStyles }) =>
+  ${({ variant, bordercolor, color, backgroundcolor }) =>
     variant === 'outlined'
       ? css`
           color: ${color};
