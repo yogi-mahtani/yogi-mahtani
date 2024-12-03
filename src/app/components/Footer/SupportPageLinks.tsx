@@ -18,7 +18,9 @@ const SupportPageLinks = () => {
     { title: 'Contact Us', url: 'https://wa.me/+6581502247' },
   ];
 
-  return pages.map(({ title, url }) => <NavLink name={title} url={url} />);
+  return pages.map(({ title, url }) => (
+    <NavLink key={title} name={title} url={url} />
+  ));
 };
 
 export default SupportPageLinks;

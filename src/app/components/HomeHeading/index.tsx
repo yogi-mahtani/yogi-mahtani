@@ -60,41 +60,43 @@ const HomeHeading = () => {
   };
 
   return (
-    <div className="intro">
-      <div className="intro-heading">Looking for your next </div>
-      <TypingAnimation
-        toggle={toggle}
-        isCompleted={isCompleted}
-        id={1}
-        strings={productsStr}
-      />
-      <div className="intro-heading">with experience in </div>
-      <TypingAnimation
-        toggle={toggle}
-        id={2}
-        isCompleted={isCompleted}
-        strings={sectorStrs}
-      />
-      <div className="intro-heading">covering</div>
-      <TypingAnimation
-        toggle={toggle}
-        id={3}
-        isCompleted={isCompleted}
-        strings={regions}
-      />
-      <p className="minor-heading">
-        Helping Product & Technology Businesses find and <br /> access Talent in
-        emerging markets{' '}
-      </p>
-      <div className="button-container">
-        <Button
-          size="large"
-          variant="filled"
-          color="var(--color-brand-white)"
-          backgroundcolor="var(--color-brand-black)"
-        >
-          Enquire Now
-        </Button>
+    <div className="home-wrapper">
+      <div className="intro">
+        <div className="intro-heading">Looking for your next </div>
+        <TypingAnimation
+          toggle={toggle}
+          isCompleted={isCompleted}
+          id={1}
+          strings={productsStr}
+        />
+        <div className="intro-heading">with experience in </div>
+        <TypingAnimation
+          toggle={toggle}
+          id={2}
+          isCompleted={isCompleted}
+          strings={sectorStrs}
+        />
+        <div className="intro-heading">covering</div>
+        <TypingAnimation
+          toggle={toggle}
+          id={3}
+          isCompleted={isCompleted}
+          strings={regions}
+        />
+        <p className="minor-heading">
+          Helping Product & Technology Businesses find and <br /> access Talent
+          in emerging markets{' '}
+        </p>
+        <div className="button-container">
+          <Button
+            size="large"
+            variant="filled"
+            color="var(--color-brand-white)"
+            backgroundcolor="var(--color-brand-black)"
+          >
+            Enquire Now
+          </Button>
+        </div>
       </div>
     </div>
   );
