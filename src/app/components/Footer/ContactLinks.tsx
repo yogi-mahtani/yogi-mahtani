@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import NavLink from '@/app/ui-kit/NavLink';
 import SvgImage from '../SvgImage';
 
 // Styles
@@ -34,13 +34,13 @@ const ContactLinks = () => {
       <SvgImage path={link.img} width={48} height={48} />
       <h6>{link.title}</h6>
       {link.title === 'Email' ? (
-        <Link href={`mailto:${link.value}`} legacyBehavior>
-          <a>{link.value}</a>
-        </Link>
+        <NavLink underline={true} url={`mailto:${link.value}`}>
+          {link.value}
+        </NavLink>
       ) : (
-        <Link href={`tel:${link.value.replace(/\s+/g, '')}`} legacyBehavior>
-          <a>{link.value}</a>
-        </Link>
+        <NavLink underline={true} url={`tel:${link.value.replace(/\s+/g, '')}`}>
+          {link.value}
+        </NavLink>
       )}
     </div>
   ));

@@ -1,0 +1,40 @@
+.text-container {
+  background: var(--text-orange-and-pink-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+
+  @media (max-width: 480px) {
+    min-width: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--animation-heading-font-size-mobile);
+  }
+
+  @media (min-width: 480px) and (max-width: 1024px) {
+    font-size: var(--animation-heading-font-size-tablet);
+  }
+}
+
+.text {
+  font-size: var(--animation-heading-font-size);
+  background: var(--text-orange-and-pink-gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+
+  @media (max-width: 480px) {
+    font-size: var(--animation-heading-font-size-mobile);
+  }
+
+  @media (min-width: 480px) and (max-width: 1024px) {
+    font-size: var(--animation-heading-font-size-tablet);
+  }
+}
