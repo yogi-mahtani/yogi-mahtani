@@ -1,15 +1,21 @@
 import Link from 'next/link';
-import './styles.css';
+
+import { LinkItem } from './styled';
 
 type NavLinkProps = {
   url: string;
-  name: string;
+  underline?: boolean;
+  children: React.ReactNode;
 };
 
-const NavLink: React.FC<NavLinkProps> = ({ url, name }) => {
+const NavLink: React.FC<NavLinkProps> = ({
+  url,
+  underline = false,
+  children,
+}) => {
   return (
     <Link href={url} passHref>
-      <div className="nav-link">{name}</div>
+      <LinkItem underline={underline.toString()}>{children}</LinkItem>
     </Link>
   );
 };

@@ -1,4 +1,4 @@
-.socail-link {
+.social-links {
   width: 20px;
   height: auto;
   object-fit: contain;
@@ -89,10 +89,6 @@
   align-items: center;
   gap: 1.25rem;
 
-  a {
-    text-decoration: underline;
-  }
-
   @media (max-width: 768px) {
     h6 {
       font-size: 24px;
@@ -128,11 +124,5 @@
 
   .footer-conatact-link-container {
     flex-direction: column;
-  }
-}
-
-.privacy-link-item {
-  p {
-    text-decoration: underline;
   }
 }

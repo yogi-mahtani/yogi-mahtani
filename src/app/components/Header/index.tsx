@@ -43,7 +43,9 @@ const Header: React.FC = () => {
     return (
       <>
         {links.map(({ name, url }) => (
-          <NavLink key={name} name={name} url={url} />
+          <NavLink key={name} url={url}>
+            {name}
+          </NavLink>
         ))}
       </>
     );

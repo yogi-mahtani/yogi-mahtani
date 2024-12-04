@@ -19,7 +19,9 @@ const SupportPageLinks = () => {
   ];
 
   return pages.map(({ title, url }) => (
-    <NavLink key={title} name={title} url={url} />
+    <NavLink key={title} url={url}>
+      {title}
+    </NavLink>
   ));
 };
 
