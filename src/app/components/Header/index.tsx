@@ -11,6 +11,7 @@ import { NAV_LINKS, BUTTON_LINKS } from '@/app/constants';
 
 // styles
 import './index.css';
+import NavLink from '@/app/ui-kit/NavLink';
 interface Link {
   name: string;
   url: string;
@@ -41,10 +42,10 @@ const Header: React.FC = () => {
 
     return (
       <>
-        {links.map((link) => (
-          <Link key={link.url} href={link.url} passHref>
-            <div className="nav-link">{link.name}</div>
-          </Link>
+        {links.map(({ name, url }) => (
+          <NavLink key={name} url={url}>
+            {name}
+          </NavLink>
         ))}
       </>
     );

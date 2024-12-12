@@ -71,6 +71,15 @@ body {
   --link-primary: var(--grey-scale-800); /* black */
   --link-secondary: var(--grey-scale-400); /* neutral */
   --link-alternate: var(--grey-scale-0); /* white */
+
+  --animation-heading-font-size: 4rem;
+  --animation-heading-font-size-mobile: 1.25rem;
+  --animation-heading-font-size-tablet: 2.8rem;
+  --text-orange-and-pink-gradient: linear-gradient(
+    to right,
+    rgba(255, 48, 48, 1),
+    rgba(255, 0, 160, 0.8)
+  );
 }
 
 /* CSS Reset */
@@ -88,14 +97,13 @@ body {
 
 @font-face {
   font-family: 'Roboto';
-  src: url('./fonts/Roboto-Regular.ttf')
+  src: url('./fonts/Roboto-Regular.ttf');
 }
-
 
 html,
 body {
   height: 100%;
-  font-family:'Roboto' ;
+  font-family: 'Roboto';
 }
 
 body {

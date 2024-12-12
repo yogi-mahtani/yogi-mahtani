@@ -1,20 +1,53 @@
-.intro{
-    display: flex;
-    background-size: contain;
-    background-size: 100% 100%;
-    object-fit: cover;
-    flex-direction: column;
-    align-items: center; 
-   margin:85px 45px 85px 45px;
-   /* background-image: url('../../../../public/HeroHeaderImage1.svg');
-   background-repeat:no-repeat;
-    background-size:contain;
-    background-position:center; */
+.home-wrapper {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-image: url('/images/background-image.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  background-clip: content-box;
+
+  /* Remove the background for mobile */
+  @media (max-width: 1024px) {
+    background-image: none;
+  }
+  @media (min-width: 1025px) and (max-width: 1400px) {
+    background-size: 98%;
+  }
 }
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 112px 0;
+
+  @media (max-width: 767px) {
+    margin: 64px 12px;
+  }
+}
+
 .intro-heading {
   font-weight: 700;
   font-family: 'Roboto';
-  font-size: 2.8rem;
+  font-size: var(--animation-heading-font-size);
+  text-align: center;
+  font-style: normal;
+  line-height: 120%;
+
+  @media (max-width: 480px) {
+    font-size: var(--animation-heading-font-size-mobile);
+  }
+
+  @media (min-width: 480px) and (max-width: 1024px) {
+    font-size: var(--animation-heading-font-size-tablet);
+  }
 }
 
 .colored-heading {
@@ -28,47 +61,29 @@
 }
 
 .minor-heading {
-  margin-top: 8px;
+  margin-top: 24px;
+  display: flex;
+  text-align: center;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 150%;
+
+  @media (max-width: 480px) {
+    font-size: 0.875rem;
+    margin-top: 20px;
+  }
 }
 
 .button-container {
-  margin-top: 30px;
-}
+  margin-top: 32px;
+  padding-bottom: 16px;
 
-.minor-heading {
-    display: flex;
-}
-
-.minor-heading-mob {
-    display: none;
-}
-
-@media only screen and (max-width: 480px) {
-  .intro-heading {
-    font-size: 1.2rem;
+  @media (max-width: 768px) {
+    margin-top: 24px;
   }
-
-  .intro{
-    margin:40px;
-    background-image: unset;
-}
-
-.minor-heading{
-    font-size: 12px;
-    text-align: center;
-}
-.minor-heading {
-    display: none;
 }
 
 .minor-heading-mob {
- display: block;
- text-align: center;
- font-size: 14px;
+  display: none;
 }
-.minor-heading-mob:nth-of-type(1){
-    margin-top: 30px;
-}
-
-}
-  
