@@ -10,8 +10,8 @@ interface ButtonLinks {
 }
 
 interface AnimationConfigs {
-  speed: number,
-  waitTime: number
+  speed: number;
+  waitTime: number;
 }
 
 export const NAV_LINKS: NavLinks = {
@@ -27,9 +27,7 @@ export const BUTTON_LINKS: ButtonLinks = {
   findTalent: '#',
 };
 
-
-
 export const animationConfigs: AnimationConfigs = {
   speed: 100,
-  waitTime: 1000
+  waitTime: 1000,
 };

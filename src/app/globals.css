@@ -190,3 +190,7 @@ h6 {
     font-size: var(--font-size-h6-mobile);
   }
 }
+
+.common-sytled-wrapper {
+  padding: 64px;
+}

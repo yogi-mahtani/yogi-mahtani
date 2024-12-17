@@ -24,14 +24,14 @@ const Footer = () => {
         <div className="footer-contact-page-links-container">
           <SupportPageLinks />
         </div>
-        <div className="footer-socialMedia">
+        <div className="footer-social-media">
           <SocialLinks />
         </div>
       </div>
       <div className="footer-privacy-contact-links-container">
         <Divider></Divider>
         <div className="footer-privacy-links-container">
-          <p>© 2024 Fynder Talent.All rights reserved</p>
+          <p>© 2024 Fynder Talent. All rights reserved</p>
           <PrivacyLinks />
         </div>
         <div className="footer-contact-link-container">

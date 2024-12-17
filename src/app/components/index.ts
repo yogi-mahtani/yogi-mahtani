@@ -4,3 +4,4 @@ export { default as HamburgerMenu } from './HamburgerMenu';
 export { default as HomeHeading } from './HomeHeading';
 export { default as Footer } from './Footer';
 export { default as Logo } from './Logo';
+export { default as ReferralProgram } from './ReferralProgram';
