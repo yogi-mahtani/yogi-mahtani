@@ -12,7 +12,7 @@ import {
   ButtonWrapper,
 } from './styled';
 
-const ReferralProgram = () => {
+const ReferralProgram: React.FC = () => {
   return (
     <StyledBox>
       <HeadingWrapper>

@@ -1,11 +1,18 @@
-import { Header, HomeHeading, ReferralProgram, Footer } from '@/app/components';
+import {
+  Header,
+  HomeHeading,
+  ReferralProgram,
+  Footer,
+  KPISection,
+} from '@/app/components';
 
 export default function Home() {
   return (
     <>
       <Header />
       <HomeHeading />
-      <div className="common-sytled-wrapper">
+      <div className="common-styled-wrapper">
+        <KPISection />
         <ReferralProgram />
       </div>
       <Footer />
