@@ -1,4 +1,8 @@
+// components
 import Button from '@/app/ui-kit/Button';
+import KPICardSection from './KPICardSection';
+
+// constants
 import { KPI_GRID_VALUES } from './constants';
 import {
   SectionContainer,
@@ -9,8 +13,6 @@ import {
   SectionDescription,
   ButtonContainer,
   KPIGrid,
-  KPICard,
-  CardValue,
 } from './styled';
 
 const KPISection = () => {
@@ -20,37 +22,30 @@ const KPISection = () => {
         <SectionSubtitle>Success</SectionSubtitle>
         <SectionTitle>Our KPI's</SectionTitle>
         <SectionDescription>
-          Identifying the right Talent is Easy! We focus on delivering a great
-          customer experience.
+          <p>Identifying the right Talent is Easy!</p>
+          <p>We focus on delivering a great customer experience.</p>
         </SectionDescription>
         <ButtonContainer>
-          <Button
-            variant="outlined"
-            color="var(--color-orange)"
-            bordercolor="var(--color-orange)"
-          >
-            Contact Us
-          </Button>
           <Button
             variant="filled"
             color="var(--color-brand-white)"
             backgroundcolor="var(--color-brand-black)"
           >
-            Become Our Client
+            Become a client
           </Button>
         </ButtonContainer>
       </LeftSection>
       <RightSection>
         <KPIGrid>
-          {KPI_GRID_VALUES.map(({ title, value, description }) => {
-            return (
-              <KPICard key={title}>
-                <h6>{title}</h6>
-                <CardValue>{value}</CardValue>
-                <p>{description}</p>
-              </KPICard>
-            );
-          })}
+          {KPI_GRID_VALUES.map(({ title, value, description, type }) => (
+            <KPICardSection
+              key={title}
+              title={title}
+              value={value}
+              description={description}
+              type={type}
+            />
+          ))}
         </KPIGrid>
       </RightSection>
     </SectionContainer>

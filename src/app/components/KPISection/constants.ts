@@ -2,7 +2,7 @@ type Grid = {
   title: string;
   value: number;
   description: string;
-  type: 'greater-than' | 'percentage' | '';
+  type: 'greater-than' | 'percentage' | null;
 };
 
 export const KPI_GRID_VALUES: Grid[] = [
@@ -30,6 +30,6 @@ export const KPI_GRID_VALUES: Grid[] = [
     title: 'Industries Specialism',
     value: 5,
     description: 'Fintech, GreenTech, Adtech, Martech & Retail ',
-    type: '',
+    type: null,
   },
 ];

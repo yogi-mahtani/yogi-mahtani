@@ -6,3 +6,4 @@ export { default as Footer } from './Footer';
 export { default as Logo } from './Logo';
 export { default as ReferralProgram } from './ReferralProgram';
 export { default as KPISection } from './KPISection';
+export { default as SlidingLogos } from './SlidingLogos';

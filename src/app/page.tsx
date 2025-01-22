@@ -4,6 +4,7 @@ import {
   ReferralProgram,
   Footer,
   KPISection,
+  SlidingLogos,
 } from '@/app/components';
 
 export default function Home() {

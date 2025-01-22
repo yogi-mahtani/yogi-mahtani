@@ -12,9 +12,13 @@ export const SectionContainer = styled.div`
   gap: 80px;
 `;
 
-export const LeftSection = styled.div``;
+export const LeftSection = styled.div`
+  flex: 1;
+`;
 
-export const RightSection = styled.div``;
+export const RightSection = styled.div`
+  flex: 1;
+`;
 
 export const SectionTitle = styled.h2`
   font-style: normal;
@@ -29,7 +33,7 @@ export const SectionSubtitle = styled.h6`
   margin-bottom: 16px;
 `;
 
-export const SectionDescription = styled.p`
+export const SectionDescription = styled.div`
   font-size: 1.125rem;
   font-weight: 400;
   line-height: 150%;
@@ -49,25 +53,25 @@ export const KPIGrid = styled.div`
 `;
 
 export const KPICard = styled.div`
-  aspect-ratio: 1 / 1;
+  width: 100%;
   max-width: 336px;
   justify-self: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   gap: 48px;
   padding: 32px;
+  border-radius: 16px;
   border: 1px solid var(--grey-scale-800);
 
   h6 {
-    align-self: flex-start;
     text-align: left;
     font-weight: 700;
   }
 
   p {
-    text-align: right;
+    text-align: center;
     font-size: 1rem;
     font-weight: 400;
     border-top: 1px solid var(--grey-scale-800);
@@ -78,8 +82,12 @@ export const KPICard = styled.div`
 
 export const CardValue = styled.div`
   font-size: 80px;
+  margin-bottom: -48px;
+  font-weight: 700;
   background: linear-gradient(102deg, #ff3030 16.02%, #ff00a0 109.63%);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 `;
+
+export const Indicator = styled.span``;
