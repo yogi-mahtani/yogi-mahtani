@@ -6,7 +6,9 @@ export interface SelectOptionProps {
 export interface FormFieldProps {
   label: string;
   value: string;
-  icon?: string;
+  icon?: boolean;
+  options: { label: string; value: string }[];
+  setSelectedValue: (value: string) => void;
 }
 
 export interface InputFieldProps {
