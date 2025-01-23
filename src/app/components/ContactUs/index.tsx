@@ -4,31 +4,33 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { FormField } from './components/FormField';
 import { InputField } from './components/InputField';
+import { desiredHires, roles, sectors } from './constants';
 
 export const TalentFinderForm: React.FC = () => {
   const [message, setMessage] = useState('');
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
+  const [selectedHire, setSelectedHire] = useState('product_management');
+  const [selectedRole, setSelectedRole] = useState('single_hire');
+  const [selectedSector, setSelectedSector] = useState('fintech');
 
   const formFields = [
     {
       label: 'How many people are you looking to hire?',
-      value: 'Single Hire',
-      icon: 'https://cdn.builder.io/api/v1/image/assets/TEMP/87950a9fde00863eb7ee89ab9986f71980c5f628dbd06e23029107555b815be7?placeholderIfAbsent=true&apiKey=b5281f63547d473f986bbfa9529ea7d1',
+      value: selectedRole,
+      options: desiredHires,
+      onChange: (value: string) => setSelectedHire(value),
     },
     {
       label: 'Function to hire',
-      value: 'Regional Product Director',
-      icon: 'https://cdn.builder.io/api/v1/image/assets/TEMP/87950a9fde00863eb7ee89ab9986f71980c5f628dbd06e23029107555b815be7?placeholderIfAbsent=true&apiKey=b5281f63547d473f986bbfa9529ea7d1',
+      value: selectedHire,
+      options: roles,
+      onChange: (value: string) => setSelectedRole(value),
     },
     {
       label: 'Industry & Sector',
-      value: 'Martech, SaaS',
-      icon: 'https://cdn.builder.io/api/v1/image/assets/TEMP/87950a9fde00863eb7ee89ab9986f71980c5f628dbd06e23029107555b815be7?placeholderIfAbsent=true&apiKey=b5281f63547d473f986bbfa9529ea7d1',
-    },
-    {
-      label: 'Coverage',
-      value: 'Regional - APAC',
-      icon: 'https://cdn.builder.io/api/v1/image/assets/TEMP/87950a9fde00863eb7ee89ab9986f71980c5f628dbd06e23029107555b815be7?placeholderIfAbsent=true&apiKey=b5281f63547d473f986bbfa9529ea7d1',
+      value: selectedSector,
+      options: sectors,
+      onChange: (value: string) => setSelectedSector(value),
     },
   ];
 
@@ -63,7 +65,9 @@ export const TalentFinderForm: React.FC = () => {
                 key={index}
                 label={field.label}
                 value={field.value}
-                icon={field.icon}
+                options={field.options}
+                setSelectedValue={field.onChange}
+                icon={true}
               />
             ))}
           </FormSection>
