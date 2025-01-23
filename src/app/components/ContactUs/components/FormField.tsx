@@ -26,10 +26,10 @@ export const FormField = ({
 const FieldWrapper = styled.div`
   margin-top: 8px;
   width: 100%;
+  padding-bottom: 8px;
 `;
 
 const SelectOption = styled.div`
   display: flex;
   align-items: center;
-  padding: 12px 0;
 `;

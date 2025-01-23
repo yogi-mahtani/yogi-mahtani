@@ -20,7 +20,7 @@ export const InputField = ({
 const InputWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
   width: 100%;
 `;
 
