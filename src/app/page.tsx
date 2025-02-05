@@ -8,6 +8,7 @@ import {
   Offerings,
   KPISection,
   SlidingLogos,
+  CustomerReviews,
 } from '@/app/components';
 
 const MainPage = styled.div``;
@@ -19,6 +20,7 @@ export default function Home() {
       <HomeHeading />
       <div className="common-styled-wrapper">
         <SlidingLogos />
+        <CustomerReviews />
         <Offerings />
         <KPISection />
         <ReferralProgram />

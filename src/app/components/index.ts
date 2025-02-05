@@ -8,3 +8,4 @@ export { default as ReferralProgram } from './ReferralProgram';
 export { default as KPISection } from './KPISection';
 export { default as SlidingLogos } from './SlidingLogos';
 export { default as Offerings } from './Offerings';
+export { default as CustomerReviews } from './CustomerReviews';

@@ -35,7 +35,7 @@ export const SliderContainer = styled.div`
 export const LogosWrapper = styled.div`
   display: flex;
   width: calc(200% + 10px);
-  animation: ${slide} 8s linear infinite;
+  animation: ${slide} 10s linear infinite;
 `;
 
 export const Logo = styled.div`
