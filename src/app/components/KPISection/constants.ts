@@ -1,8 +1,8 @@
-type Grid = {
+export type Grid = {
   title: string;
   value: number;
   description: string;
-  type: 'greater-than' | 'percentage' | null;
+  type: 'greater-than' | 'percentage' | null | string;
 };
 
 export const KPI_GRID_VALUES: Grid[] = [

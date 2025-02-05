@@ -10,10 +10,21 @@ export const SectionContainer = styled.div`
   align-items: center;
   justify-content: center;
   gap: 80px;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
 `;
 
 export const LeftSection = styled.div`
   flex: 1;
+  @media (max-width: 800px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+  }
 `;
 
 export const RightSection = styled.div`
@@ -50,6 +61,9 @@ export const KPIGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 32px;
+  @media (max-width: 800px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
 
 export const KPICard = styled.div`

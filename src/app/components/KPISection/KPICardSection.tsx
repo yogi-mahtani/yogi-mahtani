@@ -1,24 +1,15 @@
 'use client';
 import { useEffect, useState, useRef } from 'react';
 import ValueIndicator from './ValueIndicator';
+import { Grid } from './constants';
 
 import { useCountUp } from '@/app/hooks';
 import { KPICard, CardValue } from './styled';
 
-const KPICardSection = ({
-  title,
-  value,
-  description,
-  type,
-}: {
-  title: string;
-  value: number;
-  description: string;
-  type: string;
-}) => {
+const KPICardSection = ({ title, value, description, type }: Grid) => {
   const [hasStartedCounting, setHasStartedCounting] = useState(false);
   const ref = useRef<HTMLDivElement | null>(null);
-  const countedValue = useCountUp(hasStartedCounting ? value : 1, 50000);
+  const countedValue = useCountUp(hasStartedCounting ? value : 1, 70000);
 
   useEffect(() => {
     const observer = new IntersectionObserver(

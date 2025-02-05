@@ -1,5 +1,5 @@
 type ValueIndicatorProps = {
-  type: 'greater-than' | 'percentage' | null;
+  type: 'greater-than' | 'percentage' | null | string;
 };
 
 const ValueIndicator = ({ type }: ValueIndicatorProps) => {
