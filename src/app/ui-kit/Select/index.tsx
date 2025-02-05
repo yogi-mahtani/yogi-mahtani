@@ -71,8 +71,8 @@ const SelectedValue = styled.div`
 
 const ArrowIcon = styled.span<{ isOpen: boolean }>`
   display: inline-block;
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   border-left: 2px solid #000;
   border-bottom: 2px solid #000;
   transform: ${(props) => (props.isOpen ? 'rotate(135deg)' : 'rotate(-45deg)')};

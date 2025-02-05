@@ -8,7 +8,6 @@ import { desiredHires, roles, sectors } from './constants';
 
 export const TalentFinderForm: React.FC = () => {
   const [message, setMessage] = useState('');
-  const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [selectedHire, setSelectedHire] = useState('product_management');
   const [selectedRole, setSelectedRole] = useState('single_hire');
   const [selectedSector, setSelectedSector] = useState('fintech');
@@ -39,12 +38,6 @@ export const TalentFinderForm: React.FC = () => {
     // Handle form submission
   };
 
-  const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
-    if (e.target.files && e.target.files[0]) {
-      setSelectedFile(e.target.files[0]);
-    }
-  };
-
   return (
     <main>
       <Container>
@@ -73,9 +66,14 @@ export const TalentFinderForm: React.FC = () => {
           </FormSection>
 
           <ContactSection>
-            <InputField label="Full Name" />
-            <InputField label="Title" />
-            <InputField label="Company Email" type="email" />
+            <InputField required={true} label="Full Name" />
+            <InputField required={true} label="Title" />
+            <InputField
+              required={true}
+              placeholder="xyz@company.com"
+              label="Company Email"
+              type="email"
+            />
 
             <MessageWrapper>
               <Label htmlFor="message">Message</Label>
@@ -87,20 +85,6 @@ export const TalentFinderForm: React.FC = () => {
                 aria-label="Message"
               />
             </MessageWrapper>
-
-            <FileAttachmentLabel>
-              <FileInput
-                type="file"
-                onChange={handleFileSelect}
-                aria-label="Attach file"
-              />
-              <AttachIcon
-                loading="lazy"
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/aea5d28bcadc0f98dec1519eda7fe05f9741c9eb2b89cfbef585004c9c780731?placeholderIfAbsent=true&apiKey=b5281f63547d473f986bbfa9529ea7d1"
-                alt=""
-              />
-              <span>Attach file/Link</span>
-            </FileAttachmentLabel>
 
             <SubmitButton type="submit">Submit</SubmitButton>
           </ContactSection>
@@ -114,12 +98,10 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
-  min-height: 1497px;
   overflow: hidden;
   align-items: start;
   font-family: Roboto, sans-serif;
   padding: 112px 64px;
-  background: var(--text-orange-and-pink-gradient);
 
   @media (max-width: 991px) {
     padding: 100px 20px;
@@ -167,7 +149,7 @@ const Link = styled.a`
 `;
 
 const FormSection = styled.section`
-  margin-top: 48px;
+  margin-top: 32px;
   width: 560px;
   max-width: 100%;
 
@@ -177,7 +159,7 @@ const FormSection = styled.section`
 `;
 
 const ContactSection = styled.section`
-  margin-top: 48px;
+  margin-top: 32px;
   width: 560px;
   max-width: 100%;
 `;
@@ -194,7 +176,7 @@ const Label = styled.label`
 
 const MessageArea = styled.textarea`
   width: 100%;
-  min-height: 252px;
+  min-height: 172px;
   padding: 12px;
   border: 1px solid #000;
   border-radius: 4px;
@@ -207,33 +189,6 @@ const MessageArea = styled.textarea`
     outline: none;
     border-color: #4e34f3;
   }
-`;
-
-const FileAttachmentLabel = styled.label`
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  min-height: 48px;
-  padding: 12px;
-  border: 1px solid #fff;
-  background: transparent;
-  color: #fff;
-  cursor: pointer;
-  border-radius: 4px;
-
-  &:hover {
-    background: rgba(255, 255, 255, 0.1);
-  }
-`;
-
-const FileInput = styled.input`
-  display: none;
-`;
-
-const AttachIcon = styled.img`
-  width: 24px;
-  aspect-ratio: 1;
-  object-fit: contain;
 `;
 
 const SubmitButton = styled.button`
