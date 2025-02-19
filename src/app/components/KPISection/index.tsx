@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 // components
 import Button from '@/app/ui-kit/Button';
 import KPICardSection from './KPICardSection';
@@ -13,6 +15,7 @@ import {
   SectionDescription,
   ButtonContainer,
   KPIGrid,
+  ImageWrapper,
 } from './styled';
 
 const KPISection = () => {
@@ -43,6 +46,14 @@ const KPISection = () => {
             Get in Touch
           </Button>
         </ButtonContainer>
+        <ImageWrapper></ImageWrapper>
+        {/* <Image
+          src={'/images/lead_consultant.png'}
+          alt={`Lead Consultant`}
+          width={3050}
+          height={1050}
+          unoptimized
+        /> */}
       </LeftSection>
       <RightSection>
         <KPIGrid>

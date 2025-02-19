@@ -3,11 +3,15 @@
 import Image from 'next/image';
 
 const logos = [
-  '/images/company-logo-5.png',
-  '/images/company-logo-8.png',
-  '/images/company-logo-10.png',
-  '/images/company-logo-11.png',
-  '/images/company-logo-13.png',
+  '/icons/accenture.svg',
+  '/icons/Airwallex.svg',
+  '/icons/Animoca.svg',
+  '/icons/dbs_bank.svg',
+  '/icons/Epam.svg',
+  '/icons/Gocity.svg',
+  '/icons/moneyherogroup.svg',
+  '/icons/Sapient.svg',
+  '/icons/Visenze.svg',
 ];
 
 // Styled Components

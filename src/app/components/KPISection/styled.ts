@@ -109,3 +109,11 @@ export const CardValue = styled.div`
 `;
 
 export const Indicator = styled.span``;
+
+export const ImageWrapper = styled.div`
+  position: relative;
+
+  image {
+    position: absolute;
+  }
+`;
