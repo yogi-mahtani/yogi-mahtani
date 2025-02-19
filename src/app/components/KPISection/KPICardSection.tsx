@@ -9,7 +9,8 @@ import { KPICard, CardValue } from './styled';
 const KPICardSection = ({ title, value, description, type }: Grid) => {
   const [hasStartedCounting, setHasStartedCounting] = useState(false);
   const ref = useRef<HTMLDivElement | null>(null);
-  const countedValue = useCountUp(hasStartedCounting ? value : 1, 70000);
+  const tempValue = hasStartedCounting ? value : 1;
+  const countedValue = useCountUp(tempValue ?? 1, 70000);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -39,13 +40,13 @@ const KPICardSection = ({ title, value, description, type }: Grid) => {
         <CardValue>
           {type === 'greater-than' ? (
             <>
-              <ValueIndicator type={type} />
+              <ValueIndicator $type={type} />
               {countedValue}
             </>
           ) : (
             <>
               {countedValue}
-              <ValueIndicator type={type} />
+              <ValueIndicator $type={type} />
             </>
           )}
         </CardValue>

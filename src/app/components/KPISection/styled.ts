@@ -75,14 +75,12 @@ export const KPICard = styled.div<{ value?: number }>`
   justify-self: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 48px;
   padding: 32px;
   border-radius: 16px;
   border: 1px solid var(--grey-scale-800);
-  background-color: ${({ value }) =>
-    value !== undefined ? 'transparent' : 'rgba(255, 47, 79, 0.80)'};
 
   h6 {
     text-align: left;

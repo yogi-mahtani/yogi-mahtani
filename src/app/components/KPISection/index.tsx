@@ -40,7 +40,7 @@ const KPISection = () => {
             color="var(--color-brand-white)"
             backgroundcolor="var(--color-brand-black)"
           >
-            Sign Up
+            Get in Touch
           </Button>
         </ButtonContainer>
       </LeftSection>

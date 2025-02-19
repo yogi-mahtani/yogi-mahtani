@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { css } from 'styled-components';
+import { useRouter } from 'next/navigation';
 
 // components
 import Button from '@/app/ui-kit/Button';
@@ -11,6 +11,7 @@ import TypingAnimation from '../Animations/TypingAnimation';
 import './index.css';
 
 const HomeHeading = () => {
+  const router = useRouter();
   const [completed, setCompleted] = useState(0);
   const [toggle, setToggle] = useState(false);
 
@@ -93,6 +94,7 @@ const HomeHeading = () => {
             variant="filled"
             color="var(--color-brand-white)"
             backgroundcolor="var(--color-brand-black)"
+            onClick={() => router.push('/contact-us')}
           >
             Enquire Now
           </Button>

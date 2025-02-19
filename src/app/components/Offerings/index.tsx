@@ -1,3 +1,6 @@
+'use client';
+import { useRouter } from 'next/navigation';
+
 // constants | components
 import Button from '@/app/ui-kit/Button';
 import { offerings } from './constants';
@@ -13,6 +16,8 @@ import {
 } from './styles';
 
 const Offerings = () => {
+  const router = useRouter();
+
   return (
     <SectionContainer>
       <SectionHeaderContainer>
@@ -23,24 +28,27 @@ const Offerings = () => {
         </Description>
       </SectionHeaderContainer>
       <OfferingsSection>
-        {offerings.map(({ job, title, description, bgImage, btnText }) => {
-          return (
-            <OfferingSection key={title} bgImage={bgImage}>
-              <h6>{job}</h6>
-              <h4>{title}</h4>
-              <p>{description}</p>
-              <Button
-                size="large"
-                variant="outlined"
-                bordercolor="transparent"
-                color="var(--color-brand-white)"
-                backgroundcolor="var(--color-brand-black)"
-              >
-                {btnText}
-              </Button>
-            </OfferingSection>
-          );
-        })}
+        {offerings.map(
+          ({ job, title, description, bgImage, btnText, path }) => {
+            return (
+              <OfferingSection key={title} $bgImage={bgImage}>
+                <h6>{job}</h6>
+                <h4>{title}</h4>
+                <p>{description}</p>
+                <Button
+                  size="large"
+                  variant="outlined"
+                  bordercolor="transparent"
+                  color="var(--color-brand-white)"
+                  backgroundcolor="var(--color-brand-black)"
+                  onClick={() => router.push(path)}
+                >
+                  {btnText}
+                </Button>
+              </OfferingSection>
+            );
+          }
+        )}
       </OfferingsSection>
     </SectionContainer>
   );

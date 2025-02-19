@@ -4,12 +4,12 @@ import styled from 'styled-components';
 
 export const SectionContainer = styled.div`
   border-radius: 30px;
-  background: var(--text-orange-and-pink-gradient);
+  background: #ff2f4f;
   padding: 64px;
   margin-bottom: 64px;
 `;
 
-export const OfferingSection = styled.div<{ bgImage?: string }>`
+export const OfferingSection = styled.div<{ $bgImage?: string }>`
   display: flex;
   min-height: 564px;
   justify-content: flex-end;
@@ -22,7 +22,7 @@ export const OfferingSection = styled.div<{ bgImage?: string }>`
   padding: 24px;
   overflow: hidden;
 
-  background-image: ${({ bgImage }) => `url(${bgImage})`};
+  background-image: ${({ $bgImage }) => `url(${$bgImage})`};
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -32,7 +32,8 @@ export const OfferingSection = styled.div<{ bgImage?: string }>`
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    // background: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    background: rgba(255, 47, 79, 0.6); /* Dark overlay */
     transition: background 0.3s ease-in-out;
   }
 
@@ -43,7 +44,7 @@ export const OfferingSection = styled.div<{ bgImage?: string }>`
   }
 
   &:hover::after {
-    background: rgba(0, 0, 0, 0.9); /* Darker overlay on hover */
+    background: rgba(0, 0, 0, 0.8); /* Darker overlay on hover */
   }
 
   &:hover {

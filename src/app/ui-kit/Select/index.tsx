@@ -33,7 +33,7 @@ const Select = ({
           {options.find((option) => option.value === value)?.label ||
             placeholder ||
             'Select an option'}
-          <ArrowIcon isOpen={isOpen} />
+          <ArrowIcon $isOpen={isOpen} />
         </SelectedValue>
         {isOpen && (
           <DropdownList>
@@ -80,13 +80,14 @@ const SelectedValue = styled.div`
   font-size: 16px;
 `;
 
-const ArrowIcon = styled.span<{ isOpen: boolean }>`
+const ArrowIcon = styled.span<{ $isOpen: boolean }>`
   display: inline-block;
   width: 10px;
   height: 10px;
   border-left: 2px solid #000;
   border-bottom: 2px solid #000;
-  transform: ${(props) => (props.isOpen ? 'rotate(135deg)' : 'rotate(-45deg)')};
+  transform: ${({ $isOpen }) =>
+    $isOpen ? 'rotate(135deg)' : 'rotate(-45deg)'};
   transition: transform 0.2s ease;
 `;
 

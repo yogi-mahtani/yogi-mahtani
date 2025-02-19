@@ -2,7 +2,7 @@ import Image from 'next/image';
 import styled, { css } from 'styled-components';
 
 interface DotProps {
-  active: boolean;
+  $active: boolean;
 }
 
 export const ReviewSection = styled.div`
@@ -63,6 +63,14 @@ const commonArrowStyles = css`
   padding: 6px;
   border-radius: 50px;
   border: 1px solid var(--grey-scale-800);
+
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
+  &:hover {
+    background: rgba(255, 48, 48, 1);
+    color: white;
+  }
 `;
 
 export const LeftArrow = styled(NavButton)`
@@ -85,8 +93,8 @@ export const Dot = styled.button<DotProps>`
   width: 10px;
   height: 10px;
   margin: 0 5px;
-  background-color: ${({ active }) =>
-    active ? 'var(--color-orange)' : '#ccc'};
+  background-color: ${({ $active }) =>
+    $active ? 'var(--color-orange)' : '#ccc'};
   border-radius: 50%;
   border: none;
   cursor: pointer;

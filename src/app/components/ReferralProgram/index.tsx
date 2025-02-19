@@ -1,5 +1,7 @@
 'use client';
 
+import { useRouter } from 'next/navigation';
+
 // components
 import Button from '@/app/ui-kit/Button';
 
@@ -13,6 +15,7 @@ import {
 } from './styled';
 
 const ReferralProgram: React.FC = () => {
+  const router = useRouter();
   return (
     <StyledBox>
       <HeadingWrapper>
@@ -28,6 +31,7 @@ const ReferralProgram: React.FC = () => {
           variant="filled"
           color="var(--color-brand-white)"
           backgroundcolor="var(--color-brand-black)"
+          onClick={() => router.push('/contact-us')}
         >
           Enquire Now
         </Button>

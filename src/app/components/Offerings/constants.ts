@@ -4,6 +4,7 @@ type Offerings = {
   description: string;
   bgImage: string;
   btnText: string;
+  path: string;
 };
 
 const offerings: Offerings[] = [
@@ -13,6 +14,7 @@ const offerings: Offerings[] = [
     description: 'Our offering contains solutions',
     bgImage: '/images/talentsolutions1.png',
     btnText: 'Learn More',
+    path: '/talent-solutions',
   },
   {
     job: 'Senior Executive Contract',
@@ -21,6 +23,7 @@ const offerings: Offerings[] = [
       'Looking for subject matter experts that’s available as a placeholder in your business',
     bgImage: '/images/talentsolutions2.png',
     btnText: 'Get Talent Pool',
+    path: '/fractional',
   },
   {
     job: 'Senior Executive Permenant',
@@ -29,6 +32,7 @@ const offerings: Offerings[] = [
       'Let us handle your talent acquisition so you can focus on your core business.',
     bgImage: '/images/talentsolutions3.png',
     btnText: 'Get in Touch',
+    path: '/fractional',
   },
 ];
 

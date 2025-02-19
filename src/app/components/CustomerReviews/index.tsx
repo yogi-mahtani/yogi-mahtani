@@ -93,7 +93,7 @@ export default function ReviewSlider() {
         {reviews.map((_, index) => (
           <Dot
             key={index}
-            active={index === currentIndex}
+            $active={index === currentIndex}
             onClick={() => setCurrentIndex(index)}
           />
         ))}

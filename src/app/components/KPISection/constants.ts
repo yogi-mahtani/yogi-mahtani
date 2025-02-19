@@ -1,6 +1,6 @@
 export type Grid = {
   title: string;
-  value?: number;
+  value?: number | undefined;
   description: string;
   type?: 'greater-than' | 'percentage' | null | string;
 };

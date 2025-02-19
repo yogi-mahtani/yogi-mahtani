@@ -20,8 +20,8 @@ export default function Home() {
       <HomeHeading />
       <div className="common-styled-wrapper">
         <SlidingLogos />
-        <CustomerReviews />
         <Offerings />
+        <CustomerReviews />
         <KPISection />
         <ReferralProgram />
       </div>

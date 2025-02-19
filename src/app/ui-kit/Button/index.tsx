@@ -89,7 +89,6 @@ const StyledButton = styled.button<ButtonProps>`
   align-items: center;
   justify-content: center;
   gap: 8px;
-  // border-radius: 4px;
   cursor: pointer;
   transition:
     transform 0.2s ease,
