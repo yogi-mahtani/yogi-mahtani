@@ -103,6 +103,10 @@ const Container = styled.div`
   font-family: Roboto, sans-serif;
   padding: 112px 64px;
 
+  form {
+    width: 100%;
+  }
+
   @media (max-width: 991px) {
     padding: 100px 20px;
   }
@@ -150,8 +154,8 @@ const Link = styled.a`
 
 const FormSection = styled.section`
   margin-top: 32px;
-  width: 560px;
-  max-width: 100%;
+  max-width: 560px;
+  width: 100%;
 
   @media (max-width: 991px) {
     margin-top: 40px;
@@ -160,8 +164,8 @@ const FormSection = styled.section`
 
 const ContactSection = styled.section`
   margin-top: 32px;
-  width: 560px;
-  max-width: 100%;
+  max-width: 560px;
+  width: 100%;
 `;
 
 const MessageWrapper = styled.div`

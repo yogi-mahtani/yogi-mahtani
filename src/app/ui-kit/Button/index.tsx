@@ -21,7 +21,7 @@ const CubeIcon = () => (
 );
 
 type ButtonProps = {
-  variant: 'outlined' | 'filled';
+  variant: 'outlined' | 'filled' | 'link';
   size?: 'small' | 'medium' | 'large';
   showIcon?: boolean;
   iconPosition?: 'left' | 'right';

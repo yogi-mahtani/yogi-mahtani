@@ -1,4 +1,5 @@
-// constants
+// constants | components
+import Button from '@/app/ui-kit/Button';
 import { offerings } from './constants';
 
 // styles
@@ -28,7 +29,15 @@ const Offerings = () => {
               <h6>{job}</h6>
               <h4>{title}</h4>
               <p>{description}</p>
-              <p>Learn More</p>
+              <Button
+                size="large"
+                variant="outlined"
+                bordercolor="transparent"
+                color="var(--color-brand-white)"
+                backgroundcolor="var(--color-brand-black)"
+              >
+                Learn More
+              </Button>
             </OfferingSection>
           );
         })}

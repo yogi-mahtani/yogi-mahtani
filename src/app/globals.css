@@ -193,4 +193,8 @@ h6 {
 
 .common-styled-wrapper {
   padding: 64px;
+
+  @media (max-width: 600px) {
+    padding: 12px 24px;
+  }
 }

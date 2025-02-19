@@ -28,6 +28,9 @@ export const OfferingSection = styled.div`
   p {
     margin-bottom: 24px;
   }
+  button {
+    margin-left: -20px;
+  }
 `;
 
 export const SectionHeaderContainer = styled.div`
