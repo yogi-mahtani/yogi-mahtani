@@ -19,6 +19,10 @@
   @media (min-width: 1025px) and (max-width: 1400px) {
     background-size: 98%;
   }
+
+  @media (max-width: 600px) {
+    min-height: 40vh;
+  }
 }
 
 .intro {
@@ -30,6 +34,10 @@
 
   @media (max-width: 767px) {
     margin: 64px 12px;
+  }
+
+  @media (max-width: 600px) {
+    margin: 80px 12px 16px 12px;
   }
 }
 

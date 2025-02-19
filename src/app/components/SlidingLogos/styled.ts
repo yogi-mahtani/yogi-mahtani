@@ -40,6 +40,10 @@ export const LogosWrapper = styled.div`
   gap: 120px;
   width: calc(200% + 10px);
   animation: ${slide} 20s linear infinite;
+
+  @media (max-width: 600px) {
+    gap: 30px;
+  }
 `;
 
 export const Logo = styled.div`

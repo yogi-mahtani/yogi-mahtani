@@ -7,6 +7,9 @@ export const SectionContainer = styled.div`
   background: #ff2f4f;
   padding: 64px;
   margin-bottom: 64px;
+  @media (max-width: 600px) {
+    padding: 32px;
+  }
 `;
 
 export const OfferingSection = styled.div<{ $bgImage?: string }>`
@@ -64,6 +67,9 @@ export const OfferingSection = styled.div<{ $bgImage?: string }>`
   }
   button {
     margin-left: -20px;
+  }
+  @media (max-width: 600px) {
+    min-height: 200px;
   }
 `;
 

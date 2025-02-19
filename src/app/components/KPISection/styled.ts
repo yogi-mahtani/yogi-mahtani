@@ -14,6 +14,9 @@ export const SectionContainer = styled.div`
   @media (max-width: 1024px) {
     flex-direction: column;
   }
+  @media (max-width: 600px) {
+    padding: 24px;
+  }
 `;
 
 export const LeftSection = styled.div`

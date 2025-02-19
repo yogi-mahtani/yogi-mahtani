@@ -71,7 +71,7 @@ export default function GoFractional() {
           <Button
             size="large"
             variant="filled"
-            btnStyles={css`
+            $btnStyles={css`
               margin-top: 8px;
             `}
             onClick={handleClick}
@@ -103,7 +103,7 @@ export default function GoFractional() {
         <Button
           size="large"
           variant="filled"
-          btnStyles={css`
+          $btnStyles={css`
             margin-top: 8px;
           `}
           color="var(--color-brand-white)"
@@ -121,7 +121,7 @@ export default function GoFractional() {
       <Button
         size="extra-large"
         variant="filled"
-        btnStyles={css`
+        $btnStyles={css`
           padding: 10px 48px;
           margin-top: 32px;
         `}

@@ -30,7 +30,7 @@ type ButtonProps = {
   color?: string;
   backgroundcolor?: string;
   children?: React.ReactNode;
-  btnStyles?: CSSProp;
+  $btnStyles?: CSSProp;
 };
 
 const buttonVariants = css<ButtonProps>`
@@ -64,7 +64,7 @@ const buttonVariants = css<ButtonProps>`
             transform: scale(0.98); // Slight scale-down effect on click
           }
         `}
-  ${({ btnStyles }) => (btnStyles ? btnStyles : '')};
+  ${({ $btnStyles }) => ($btnStyles ? $btnStyles : '')};
 `;
 
 // Size styles for the button
@@ -108,7 +108,7 @@ const Button: React.FC<ButtonProps> = ({
   color,
   backgroundcolor,
   children,
-  btnStyles,
+  $btnStyles,
 }) => {
   return (
     <StyledButton
@@ -116,7 +116,7 @@ const Button: React.FC<ButtonProps> = ({
       size={size}
       color={color}
       onClick={onClick}
-      btnStyles={btnStyles}
+      $btnStyles={$btnStyles}
       bordercolor={bordercolor}
       backgroundcolor={backgroundcolor}
     >

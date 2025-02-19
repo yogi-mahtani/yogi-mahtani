@@ -26,7 +26,7 @@ const Select = ({
   };
 
   return (
-    <SelectWrapper btnStyles={btnStyles}>
+    <SelectWrapper $btnStyles={btnStyles}>
       <FieldLabel>{label}</FieldLabel>
       <DropdownWrapper>
         <SelectedValue onClick={() => setIsOpen(!isOpen)}>
@@ -53,10 +53,10 @@ const Select = ({
 };
 
 // Styled Components for the Select component
-const SelectWrapper = styled.div<{ btnStyles?: string }>`
+const SelectWrapper = styled.div<{ $btnStyles?: string }>`
   width: 100%;
   max-width: 560px;
-  ${({ btnStyles }) => (btnStyles ? btnStyles : '')};
+  ${({ $btnStyles }) => ($btnStyles ? $btnStyles : '')};
 `;
 
 const FieldLabel = styled.label`
