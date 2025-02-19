@@ -49,6 +49,9 @@ export const SectionDescription = styled.div`
   font-weight: 400;
   line-height: 150%;
   margin-bottom: 16px;
+  p {
+    margin-bottom: 24px;
+  }
 `;
 
 export const ButtonContainer = styled.div`
@@ -66,7 +69,7 @@ export const KPIGrid = styled.div`
   }
 `;
 
-export const KPICard = styled.div`
+export const KPICard = styled.div<{ value?: number }>`
   width: 100%;
   max-width: 336px;
   justify-self: center;
@@ -78,6 +81,8 @@ export const KPICard = styled.div`
   padding: 32px;
   border-radius: 16px;
   border: 1px solid var(--grey-scale-800);
+  background-color: ${({ value }) =>
+    value !== undefined ? 'transparent' : 'rgba(255, 47, 79, 0.80)'};
 
   h6 {
     text-align: left;
@@ -88,7 +93,8 @@ export const KPICard = styled.div`
     text-align: center;
     font-size: 1rem;
     font-weight: 400;
-    border-top: 1px solid var(--grey-scale-800);
+    border-top: ${({ value }) =>
+      value === undefined ? '0px' : '1px solid var(--grey-scale-800)'};
     padding-top: 16px;
     width: 100%;
   }

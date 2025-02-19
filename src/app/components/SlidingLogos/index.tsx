@@ -1,17 +1,13 @@
 'use client';
 
-import styled, { keyframes } from 'styled-components';
 import Image from 'next/image';
 
 const logos = [
-  '/icons/webflow.svg',
-  '/icons/relume.svg',
-  '/icons/webflow.svg',
-  '/icons/relume.svg',
-  '/icons/webflow.svg',
-  '/icons/relume.svg',
-  '/icons/webflow.svg',
-  '/icons/relume.svg',
+  '/images/company-logo-5.png',
+  '/images/company-logo-8.png',
+  '/images/company-logo-10.png',
+  '/images/company-logo-11.png',
+  '/images/company-logo-13.png',
 ];
 
 // Styled Components
@@ -26,7 +22,7 @@ import {
 const LogoSlider = () => {
   return (
     <SlidingSectionWrapper>
-      <Title>Our team has worked with the following brands collectively</Title>
+      <Title>Companies our team has successfully placed with </Title>
       <SliderContainer>
         <LogosWrapper>
           {[...logos, ...logos, ...logos].map((logo, index) => (

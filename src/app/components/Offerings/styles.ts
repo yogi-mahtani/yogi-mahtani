@@ -9,21 +9,54 @@ export const SectionContainer = styled.div`
   margin-bottom: 64px;
 `;
 
-export const OfferingSection = styled.div`
+export const OfferingSection = styled.div<{ bgImage?: string }>`
   display: flex;
-  min-height: 742px;
+  min-height: 564px;
   justify-content: flex-end;
   flex-direction: column;
   align-items: flex-start;
   border-radius: 16px;
-  background: rgba(0, 0, 0, 0.75);
+  position: relative;
+  color: var(--grey-scale-1100);
   color: var(--grey-scale-0);
   padding: 24px;
+  overflow: hidden;
+
+  background-image: ${({ bgImage }) => `url(${bgImage})`};
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* Overlay effect */
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    transition: background 0.3s ease-in-out;
+  }
+
+  /* Keep text above overlay */
+  * {
+    position: relative;
+    z-index: 1;
+  }
+
+  &:hover::after {
+    background: rgba(0, 0, 0, 0.9); /* Darker overlay on hover */
+  }
+
+  &:hover {
+    cursor: pointer;
+    color: var(--grey-scale-0);
+  }
+
   h6 {
     margin-bottom: 8px;
   }
   h4 {
     margin-bottom: 20px;
+    font-weight: 700;
   }
   p {
     margin-bottom: 24px;

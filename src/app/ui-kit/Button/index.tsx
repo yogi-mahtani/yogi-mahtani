@@ -22,7 +22,7 @@ const CubeIcon = () => (
 
 type ButtonProps = {
   variant: 'outlined' | 'filled' | 'link';
-  size?: 'small' | 'medium' | 'large';
+  size?: 'small' | 'medium' | 'large' | 'extra-large';
   showIcon?: boolean;
   iconPosition?: 'left' | 'right';
   onClick?: () => void;
@@ -77,6 +77,8 @@ const buttonSizes = css<ButtonProps>`
         return 'padding: 8px 20px; font-size: 14px;';
       case 'large':
         return 'padding: 10px 24px; font-size: 16px;';
+      case 'extra-large':
+        return 'padding: 12px 48px; font-size: 16px;';
     }
     return;
   }}

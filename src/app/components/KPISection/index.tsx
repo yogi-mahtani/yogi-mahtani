@@ -19,33 +19,44 @@ const KPISection = () => {
   return (
     <SectionContainer>
       <LeftSection>
-        <SectionSubtitle>Success</SectionSubtitle>
-        <SectionTitle>Our KPI's</SectionTitle>
+        <SectionSubtitle>About Fynder</SectionSubtitle>
+        <SectionTitle>Our Focus</SectionTitle>
         <SectionDescription>
-          <p>Identifying the right Talent is Easy!</p>
-          <p>We focus on delivering a great customer experience.</p>
+          <p>
+            Fynder is a specialist recruitment firm for Product and Technology
+            companies globally supporting startups, corporates, and businesses
+            undergoing digital transformation.{' '}
+          </p>
+          <p>
+            Whether you're scaling a high-growth company or modernizing an
+            established business, looking to expand into new markets, we connect
+            you with talent that will help you achieve your goals.
+          </p>
         </SectionDescription>
         <ButtonContainer>
           <Button
             variant="filled"
+            size="large"
             color="var(--color-brand-white)"
             backgroundcolor="var(--color-brand-black)"
           >
-            Become a client
+            Sign Up
           </Button>
         </ButtonContainer>
       </LeftSection>
       <RightSection>
         <KPIGrid>
-          {KPI_GRID_VALUES.map(({ title, value, description, type }) => (
-            <KPICardSection
-              key={title}
-              title={title}
-              value={value}
-              description={description}
-              type={type}
-            />
-          ))}
+          {KPI_GRID_VALUES.map(({ title, value, description, type }) => {
+            return (
+              <KPICardSection
+                key={title}
+                title={title}
+                value={value}
+                description={description}
+                type={type}
+              />
+            );
+          })}
         </KPIGrid>
       </RightSection>
     </SectionContainer>

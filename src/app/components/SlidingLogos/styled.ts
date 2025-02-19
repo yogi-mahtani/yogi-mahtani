@@ -20,8 +20,11 @@ export const SlidingSectionWrapper = styled.div`
 `;
 
 export const Title = styled.h6`
-  font-size: 1.175rem;
-  font-weight: 400;
+  text-align: center;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 150%;
 `;
 
 export const SliderContainer = styled.div`
@@ -34,6 +37,7 @@ export const SliderContainer = styled.div`
 
 export const LogosWrapper = styled.div`
   display: flex;
+  gap: 120px;
   width: calc(200% + 10px);
   animation: ${slide} 20s linear infinite;
 `;

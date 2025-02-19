@@ -2,13 +2,22 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 interface SelectProps {
-  label: string;
+  label?: string;
   value: string;
   options: { label: string; value: string }[];
   onChange: (value: string) => void;
+  placeholder?: string;
+  btnStyles?: string;
 }
 
-const Select = ({ label, value, options, onChange }: SelectProps) => {
+const Select = ({
+  label,
+  value,
+  options,
+  onChange,
+  placeholder,
+  btnStyles,
+}: SelectProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleSelect = (selectedValue: string) => {
@@ -17,11 +26,12 @@ const Select = ({ label, value, options, onChange }: SelectProps) => {
   };
 
   return (
-    <SelectWrapper>
+    <SelectWrapper btnStyles={btnStyles}>
       <FieldLabel>{label}</FieldLabel>
       <DropdownWrapper>
         <SelectedValue onClick={() => setIsOpen(!isOpen)}>
           {options.find((option) => option.value === value)?.label ||
+            placeholder ||
             'Select an option'}
           <ArrowIcon isOpen={isOpen} />
         </SelectedValue>
@@ -43,9 +53,10 @@ const Select = ({ label, value, options, onChange }: SelectProps) => {
 };
 
 // Styled Components for the Select component
-const SelectWrapper = styled.div`
+const SelectWrapper = styled.div<{ btnStyles?: string }>`
   width: 100%;
   max-width: 560px;
+  ${({ btnStyles }) => (btnStyles ? btnStyles : '')};
 `;
 
 const FieldLabel = styled.label`

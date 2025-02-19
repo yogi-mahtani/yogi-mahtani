@@ -23,9 +23,9 @@ const Offerings = () => {
         </Description>
       </SectionHeaderContainer>
       <OfferingsSection>
-        {offerings.map(({ job, title, description }) => {
+        {offerings.map(({ job, title, description, bgImage, btnText }) => {
           return (
-            <OfferingSection key={title}>
+            <OfferingSection key={title} bgImage={bgImage}>
               <h6>{job}</h6>
               <h4>{title}</h4>
               <p>{description}</p>
@@ -36,7 +36,7 @@ const Offerings = () => {
                 color="var(--color-brand-white)"
                 backgroundcolor="var(--color-brand-black)"
               >
-                Learn More
+                {btnText}
               </Button>
             </OfferingSection>
           );

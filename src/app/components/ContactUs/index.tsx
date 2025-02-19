@@ -99,12 +99,15 @@ const Container = styled.div`
   flex-direction: column;
   position: relative;
   overflow: hidden;
-  align-items: start;
+  align-items: center;
   font-family: Roboto, sans-serif;
   padding: 112px 64px;
 
   form {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   @media (max-width: 991px) {
@@ -124,6 +127,7 @@ const Header = styled.header`
   position: relative;
   width: 768px;
   max-width: 100%;
+  text-align: center;
 `;
 
 const Heading = styled.h1`

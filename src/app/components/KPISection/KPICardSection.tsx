@@ -33,21 +33,23 @@ const KPICardSection = ({ title, value, description, type }: Grid) => {
   }, []);
 
   return (
-    <KPICard ref={ref}>
+    <KPICard value={value} ref={ref}>
       <h6>{title}</h6>
-      <CardValue>
-        {type === 'greater-than' ? (
-          <>
-            <ValueIndicator type={type} />
-            {countedValue}
-          </>
-        ) : (
-          <>
-            {countedValue}
-            <ValueIndicator type={type} />
-          </>
-        )}
-      </CardValue>
+      {value && (
+        <CardValue>
+          {type === 'greater-than' ? (
+            <>
+              <ValueIndicator type={type} />
+              {countedValue}
+            </>
+          ) : (
+            <>
+              {countedValue}
+              <ValueIndicator type={type} />
+            </>
+          )}
+        </CardValue>
+      )}
       <p>{description}</p>
     </KPICard>
   );

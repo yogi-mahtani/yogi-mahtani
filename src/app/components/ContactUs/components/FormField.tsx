@@ -7,7 +7,9 @@ export const FormField = ({
   label,
   options,
   value,
+  placeholder,
   setSelectedValue,
+  btnStyles,
 }: FormFieldProps) => {
   return (
     <FieldWrapper>
@@ -16,6 +18,8 @@ export const FormField = ({
           label={label}
           value={value}
           options={options}
+          btnStyles={btnStyles}
+          placeholder={placeholder}
           onChange={setSelectedValue}
         />
       </SelectOption>

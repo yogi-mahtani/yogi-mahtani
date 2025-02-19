@@ -4,9 +4,11 @@ export interface SelectOptionProps {
 }
 
 export interface FormFieldProps {
-  label: string;
+  label?: string;
   value: string;
   icon?: boolean;
+  btnStyles?: string;
+  placeholder?: string;
   options: { label: string; value: string }[];
   setSelectedValue: (value: string) => void;
 }
