@@ -12,6 +12,9 @@ const logos = [
   '/icons/moneyherogroup.svg',
   '/icons/Sapient.svg',
   '/icons/Visenze.svg',
+  '/icons/advanceintelligent_group.svg',
+  '/icons/dfs.svg',
+  '/icons/oliver_agency.svg',
 ];
 
 // Styled Components

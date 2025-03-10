@@ -199,6 +199,10 @@ const FractionalSection = styled.div`
   align-items: center;
   padding: 112px 40px;
   gap: 80px;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+  }
 `;
 
 const Filters = styled.div`
@@ -208,6 +212,11 @@ const Filters = styled.div`
   align-items: center;
   align-self: flex-start;
   padding: 0 40px;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    width: 100%;
+  }
 `;
 
 const JobTitles = styled.div`
@@ -236,6 +245,10 @@ const LeftSection = styled.div`
   gap: 24px;
   align-items: flex-start;
   flex: 1;
+
+  @media (max-width: 600px) {
+    align-items: center;
+  }
 `;
 
 const RightSection = styled.p`
@@ -243,6 +256,10 @@ const RightSection = styled.p`
   font-weight: 400;
   line-height: 150%;
   flex: 1;
+
+  @media (max-width: 600px) {
+    text-align: center;
+  }
 `;
 
 const JobContainer = styled.div`

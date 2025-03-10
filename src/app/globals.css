@@ -169,6 +169,10 @@ h6 {
   line-height: var(--line-height-h5-h6);
 }
 
+p {
+  font-weight: 300;
+}
+
 /* Responsive typography for mobile */
 @media (max-width: 768px) {
   h1 {

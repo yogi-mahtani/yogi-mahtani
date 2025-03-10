@@ -64,6 +64,7 @@ export const OfferingSection = styled.div<{ $bgImage?: string }>`
   }
   p {
     margin-bottom: 24px;
+    font-weight: 300;
   }
   button {
     margin-left: -20px;

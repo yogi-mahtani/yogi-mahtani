@@ -74,7 +74,7 @@ export const KPIGrid = styled.div`
 
 export const KPICard = styled.div<{ value?: number }>`
   width: 100%;
-  max-width: 336px;
+  min-width: 396px;
   justify-self: center;
   display: flex;
   flex-direction: column;

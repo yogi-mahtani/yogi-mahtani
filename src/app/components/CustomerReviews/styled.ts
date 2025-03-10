@@ -1,18 +1,56 @@
 import Image from 'next/image';
-import styled, { css } from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 
 interface DotProps {
   $active: boolean;
 }
+
+// Keyframes for fade-in animation
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
+const slideIn = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`;
+
+export const ReviewContainer = styled.div<{ $isAnimating: boolean }>`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  opacity: ${({ $isAnimating }) => ($isAnimating ? '0.5' : '1')};
+  animation: ${({ $isAnimating }) => ($isAnimating ? slideIn : 'none')} 0.5s
+    ease-in-out;
+  transition: opacity 0.3s ease;
+`;
 
 export const ReviewSection = styled.div`
   margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
-  position: relative;
   padding: 84px 64px;
+  position: relative;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    padding: 60px 40px;
+  }
 `;
 
 export const Stars = styled.div`
@@ -22,17 +60,20 @@ export const Stars = styled.div`
   justify-content: center;
   align-items: center;
   gap: 4px;
+  opacity: 0;
+  animation: ${fadeIn} 0.5s ease-in-out forwards;
 `;
 
 export const ReviewText = styled.h5`
   margin: 32px 0;
   color: #333;
   font-size: 24px;
-  font-style: normal;
   font-weight: 700;
   max-width: 768px;
   width: 100%;
-  text-align: center;
+  opacity: 0;
+  animation: ${fadeIn} 0.5s ease-in-out forwards;
+  animation-delay: 1s;
 `;
 
 export const Reviewer = styled.div`
@@ -41,6 +82,9 @@ export const Reviewer = styled.div`
   justify-content: center;
   gap: 10px;
   margin-top: 10px;
+  opacity: 0;
+  animation: ${fadeIn} 0.5s ease-in-out forwards;
+  animation-delay: 0.4s;
 `;
 
 export const CompanyLogo = styled(Image)`
@@ -63,10 +107,10 @@ const commonArrowStyles = css`
   padding: 6px;
   border-radius: 50px;
   border: 1px solid var(--grey-scale-800);
-
   transition:
     background 0.3s ease,
     color 0.3s ease;
+
   &:hover {
     background: rgba(255, 48, 48, 1);
     color: white;
@@ -98,6 +142,7 @@ export const Dot = styled.button<DotProps>`
   border-radius: 50%;
   border: none;
   cursor: pointer;
+  transition: background 0.3s ease;
 `;
 
 export const ReivewerDetails = styled.div`
@@ -107,6 +152,10 @@ export const ReivewerDetails = styled.div`
   gap: 20px;
   padding: 0 20px;
   border-right: 1px solid #000;
+  opacity: 0;
+  animation: ${fadeIn} 1s ease-in-out forwards;
+  animation-delay: 1s;
+
   h6 {
     font-weight: 600;
     font-size: 16px;
@@ -120,4 +169,5 @@ export const ReivewerDetails = styled.div`
     padding: 0 40px;
   }
 `;
+
 export const ReviewerInfo = styled.div``;
