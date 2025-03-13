@@ -2,6 +2,7 @@
 import styled from 'styled-components';
 
 export const SectionContainer = styled.div`
+  position: relative;
   border-radius: 30px;
   background: #f5f5f5;
   padding: 64px;
@@ -11,7 +12,7 @@ export const SectionContainer = styled.div`
   justify-content: center;
   gap: 80px;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1300px) {
     flex-direction: column;
   }
   @media (max-width: 600px) {
@@ -99,6 +100,11 @@ export const KPICard = styled.div<{ value?: number }>`
     padding-top: 16px;
     width: 100%;
   }
+
+  @media (max-width: 992px) {
+    max-width: 364px;
+    min-width: 100%;
+  }
 `;
 
 export const CardValue = styled.div`
@@ -114,9 +120,25 @@ export const CardValue = styled.div`
 export const Indicator = styled.span``;
 
 export const ImageWrapper = styled.div`
-  position: relative;
+  position: absolute;
+  bottom: 0;
+  left: -10px;
+`;
 
-  image {
-    position: absolute;
+export const ConsultantDetails = styled.div`
+  position: absolute;
+  top: 164px;
+  right: 20px;
+  h6 {
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  svg {
+    cursor: pointer;
   }
 `;

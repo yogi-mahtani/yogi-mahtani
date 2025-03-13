@@ -14,7 +14,8 @@ const logos = [
   '/icons/Visenze.svg',
   '/icons/advanceintelligent_group.svg',
   '/icons/dfs.svg',
-  '/icons/oliver_agency.svg',
+  '/icons/oliver-agency.svg',
+  '/icons/tazapay.svg',
 ];
 
 // Styled Components
